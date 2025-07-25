@@ -8,12 +8,15 @@ draft: false
 Migrating from a traditional hub-and-spoke Virtual Network (VNET) architecture to Azure Virtual WAN can seem complex & challenging, but establishing coexistence between both environments during the transition makes the process smoother and reduces risk. This post walks you through the most efficient approach for maintaining connectivity during your migration.
 
 When planning your Virtual WAN migration, you have several connectivity options to bridge your existing and new environments
-	- Utilise ExpressRoute Circuit 
-	- Utilise Site to Site VPN Connectivity using VPN Gateways
-	- Utilise SD-WAN Connectivity using SD-WAN NVAs 
-	- Utilise On-premises traffic routing 
+- Utilise ExpressRoute Circuit 
+- Utilise Site to Site VPN Connectivity using VPN Gateways
+- Utilise SD-WAN Connectivity using SD-WAN NVAs 
+- Utilise On-premises traffic routing 
 
-**Recommended Approach:** If your existing environment already uses ExpressRoute, this is the most straightforward and cost-efficient coexistence strategy. However, recent Azure changes require specific configuration steps to ensure proper route propagation between environments. I have detailed below, configuration required to make this scenario work in your environment. 
+**Recommended Approach:** If your existing environment already uses ExpressRoute, this is the most straightforward and cost-efficient coexistence strategy. However, recent Azure changes require specific configuration steps to ensure proper route propagation between environments. I have detailed below, configuration required to make this scenario work in your environment.
+
+![alt](20250717221602.png)
+
 #### Step 01 -> Enable "Allow traffic from remote Virtual Networks" in your existing Traditional Hub Spoke ExpressRoute Gateway 
 This option allows Virtual WAN routes to be propagated to existing traditional hub spoke environment. Without this, routes wont be learned and this option is not enabled by default. 
 ![alt](20250717223030.png)

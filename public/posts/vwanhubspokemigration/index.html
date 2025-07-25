@@ -131,7 +131,7 @@
     
     
     "mainEntityOfPage": "true",
-    "wordCount": "573"
+    "wordCount": "569"
   }]
   </script>
 
@@ -520,7 +520,7 @@
   <div class="flex flex-row flex-wrap items-center">
     
     
-      <time datetime="2025-07-25T00:00:00&#43;00:00">2025-07-25</time><span class="px-2 text-primary-500">&middot;</span><span>573 words</span><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">3 mins</span>
+      <time datetime="2025-07-25T00:00:00&#43;00:00">2025-07-25</time><span class="px-2 text-primary-500">&middot;</span><span>569 words</span><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">3 mins</span>
     
 
     
@@ -572,12 +572,39 @@
     
 </h2>
 <p>Migrating from a traditional hub-and-spoke Virtual Network (VNET) architecture to Azure Virtual WAN can seem complex &amp; challenging, but establishing coexistence between both environments during the transition makes the process smoother and reduces risk. This post walks you through the most efficient approach for maintaining connectivity during your migration.</p>
-<p>When planning your Virtual WAN migration, you have several connectivity options to bridge your existing and new environments
-- Utilise ExpressRoute Circuit
-- Utilise Site to Site VPN Connectivity using VPN Gateways
-- Utilise SD-WAN Connectivity using SD-WAN NVAs
-- Utilise On-premises traffic routing</p>
+<p>When planning your Virtual WAN migration, you have several connectivity options to bridge your existing and new environments</p>
+<ul>
+<li>Utilise ExpressRoute Circuit</li>
+<li>Utilise Site to Site VPN Connectivity using VPN Gateways</li>
+<li>Utilise SD-WAN Connectivity using SD-WAN NVAs</li>
+<li>Utilise On-premises traffic routing</li>
+</ul>
 <p><strong>Recommended Approach:</strong> If your existing environment already uses ExpressRoute, this is the most straightforward and cost-efficient coexistence strategy. However, recent Azure changes require specific configuration steps to ensure proper route propagation between environments. I have detailed below, configuration required to make this scenario work in your environment.</p>
+<p>
+
+
+
+
+
+
+<figure>
+      <img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="low"
+    alt="alt"
+    srcset="
+      /posts/vwanhubspokemigration/20250717221602_hu_31b8e4a6e2522907.png  330w,
+      /posts/vwanhubspokemigration/20250717221602_hu_f558f1535cc66551.png  660w,
+      /posts/vwanhubspokemigration/20250717221602_hu_acff8dea411dd1bb.png 1280w
+    "
+    data-zoom-src="/posts/vwanhubspokemigration/20250717221602.png"
+    src="/posts/vwanhubspokemigration/20250717221602.png">
+
+  
+</figure>
+</p>
 
 <h4 class="relative group">Step 01 -&gt; Enable &ldquo;Allow traffic from remote Virtual Networks&rdquo; in your existing Traditional Hub Spoke ExpressRoute Gateway 
     <div id="step-01---enable-allow-traffic-from-remote-virtual-networks-in-your-existing-traditional-hub-spoke-expressroute-gateway" class="anchor"></div>
