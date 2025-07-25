@@ -14,15 +14,15 @@
   <meta name="theme-color">
 
   
-  <title>ExpressRoute Shared Key &middot; Cloud & AI Platforms Blog</title>
-    <meta name="title" content="ExpressRoute Shared Key &middot; Cloud & AI Platforms Blog">
+  <title>Migrate from Hub-Spoke to Azure Virtual WAN ExpressRoute Coexistence Guide &middot; Cloud & AI Platforms Blog</title>
+    <meta name="title" content="Migrate from Hub-Spoke to Azure Virtual WAN ExpressRoute Coexistence Guide &middot; Cloud & AI Platforms Blog">
 
   
   
   
   
   
-  <link rel="canonical" href="http://localhost:1313/posts/expressroute-shared-key/">
+  <link rel="canonical" href="http://localhost:1313/posts/vwanhubspokemigration/">
   
   
   
@@ -94,44 +94,44 @@
   
 
   
-  <meta property="og:url" content="http://localhost:1313/posts/expressroute-shared-key/">
+  <meta property="og:url" content="http://localhost:1313/posts/vwanhubspokemigration/">
   <meta property="og:site_name" content="Cloud & AI Platforms Blog">
-  <meta property="og:title" content="ExpressRoute Shared Key">
+  <meta property="og:title" content="Migrate from Hub-Spoke to Azure Virtual WAN ExpressRoute Coexistence Guide">
   <meta property="og:locale" content="en">
   <meta property="og:type" content="article">
     <meta property="article:section" content="posts">
-    <meta property="article:published_time" content="2025-07-10T00:00:00+00:00">
-    <meta property="article:modified_time" content="2025-07-10T00:00:00+00:00">
+    <meta property="article:published_time" content="2025-07-25T00:00:00+00:00">
+    <meta property="article:modified_time" content="2025-07-25T00:00:00+00:00">
 
   
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="ExpressRoute Shared Key">
+  <meta name="twitter:title" content="Migrate from Hub-Spoke to Azure Virtual WAN ExpressRoute Coexistence Guide">
 
   <script type="application/ld+json">
   [{
     "@context": "https://schema.org",
     "@type": "Article",
     "articleSection": "Posts",
-    "name": "ExpressRoute Shared Key",
-    "headline": "ExpressRoute Shared Key",
+    "name": "Migrate from Hub-Spoke to Azure Virtual WAN ExpressRoute Coexistence Guide",
+    "headline": "Migrate from Hub-Spoke to Azure Virtual WAN ExpressRoute Coexistence Guide",
     
     
     "inLanguage": "en",
-    "url" : "http:\/\/localhost:1313\/posts\/expressroute-shared-key\/",
+    "url" : "http:\/\/localhost:1313\/posts\/vwanhubspokemigration\/",
     "author" : {
       "@type": "Person",
       "name": "Nirmal Thewarathanthri"
     },
     "copyrightYear": "2025",
-    "dateCreated": "2025-07-10T00:00:00\u002b00:00",
-    "datePublished": "2025-07-10T00:00:00\u002b00:00",
+    "dateCreated": "2025-07-25T00:00:00\u002b00:00",
+    "datePublished": "2025-07-25T00:00:00\u002b00:00",
     
-    "dateModified": "2025-07-10T00:00:00\u002b00:00",
+    "dateModified": "2025-07-25T00:00:00\u002b00:00",
     
     
     
     "mainEntityOfPage": "true",
-    "wordCount": "359"
+    "wordCount": "573"
   }]
   </script>
 
@@ -191,6 +191,20 @@
 
 
 
+
+  
+  
+  <link
+    type="text/css"
+    rel="stylesheet"
+    href="/lib/lite-youtube-embed/lite-yt-embed.badabc6055b427669bbcf084097334cdf2029c85696c4a56e25239825d3571d26ef82b775ba19032ccd52135ccb412c9ba79da4e9e9b6f3939a6178a5f65ee5d.css"
+    integrity="sha512-utq8YFW0J2abvPCECXM0zfICnIVpbEpW4lI5gl01cdJu&#43;Ct3W6GQMszVITXMtBLJunnaTp6bbzk5pheKX2XuXQ==">
+  
+  
+  <script
+    type="text/javascript"
+    src="/lib/lite-youtube-embed/lite-yt-embed.58a8a22aed9d1cd05780869df4b0d87972fcd144a9eaff8f9a1453e58e6521c5a89ccd80bdb9f48e25ae5ee87b98bd9de51b14dd9988c60e4c89630433292084.js"
+    integrity="sha512-WKiiKu2dHNBXgIad9LDYeXL80USp6v&#43;PmhRT5Y5lIcWonM2Avbn0jiWuXuh7mL2d5RsU3ZmIxg5MiWMEMykghA=="></script>
 
 
 
@@ -453,7 +467,7 @@
     <header id="single_header" class="mt-5 max-w-prose">
       
       <h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
-        ExpressRoute Shared Key
+        Migrate from Hub-Spoke to Azure Virtual WAN ExpressRoute Coexistence Guide
       </h1>
       <div class="mt-1 mb-6 text-base text-neutral-500 dark:text-neutral-400 print:hidden">
         
@@ -506,7 +520,7 @@
   <div class="flex flex-row flex-wrap items-center">
     
     
-      <time datetime="2025-07-10T00:00:00&#43;00:00">2025-07-10</time><span class="px-2 text-primary-500">&middot;</span><span>359 words</span><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">2 mins</span>
+      <time datetime="2025-07-25T00:00:00&#43;00:00">2025-07-25</time><span class="px-2 text-primary-500">&middot;</span><span>573 words</span><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">3 mins</span>
     
 
     
@@ -548,89 +562,105 @@
 
         <div class="article-content max-w-prose mb-20">
           
-<h1 class="relative group">BGP Authentication with MD5 Hash 
-    <div id="bgp-authentication-with-md5-hash" class="anchor"></div>
+<h2 class="relative group">Introduction 
+    <div id="introduction" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#bgp-authentication-with-md5-hash" aria-label="Anchor">#</a>
-    </span>        
-    
-</h1>
-
-<h2 class="relative group">What is BGP MD5 Authentication? 
-    <div id="what-is-bgp-md5-authentication" class="anchor"></div>
-    
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#what-is-bgp-md5-authentication" aria-label="Anchor">#</a>
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#introduction" aria-label="Anchor">#</a>
     </span>        
     
 </h2>
-<p>BGP MD5 authentication is a security mechanism where BGP peers use a shared secret key to authenticate their communications. When enabled, each BGP message includes an MD5 hash calculated from the message content plus the shared key. The receiving peer calculates the same hash and compares it to verify the message came from an authenticated source.</p>
+<p>Migrating from a traditional hub-and-spoke Virtual Network (VNET) architecture to Azure Virtual WAN can seem complex &amp; challenging, but establishing coexistence between both environments during the transition makes the process smoother and reduces risk. This post walks you through the most efficient approach for maintaining connectivity during your migration.</p>
+<p>When planning your Virtual WAN migration, you have several connectivity options to bridge your existing and new environments
+- Utilise ExpressRoute Circuit
+- Utilise Site to Site VPN Connectivity using VPN Gateways
+- Utilise SD-WAN Connectivity using SD-WAN NVAs
+- Utilise On-premises traffic routing</p>
+<p><strong>Recommended Approach:</strong> If your existing environment already uses ExpressRoute, this is the most straightforward and cost-efficient coexistence strategy. However, recent Azure changes require specific configuration steps to ensure proper route propagation between environments. I have detailed below, configuration required to make this scenario work in your environment.</p>
 
-<h2 class="relative group">How MD5 Hash Works 
-    <div id="how-md5-hash-works" class="anchor"></div>
+<h4 class="relative group">Step 01 -&gt; Enable &ldquo;Allow traffic from remote Virtual Networks&rdquo; in your existing Traditional Hub Spoke ExpressRoute Gateway 
+    <div id="step-01---enable-allow-traffic-from-remote-virtual-networks-in-your-existing-traditional-hub-spoke-expressroute-gateway" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#how-md5-hash-works" aria-label="Anchor">#</a>
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#step-01---enable-allow-traffic-from-remote-virtual-networks-in-your-existing-traditional-hub-spoke-expressroute-gateway" aria-label="Anchor">#</a>
     </span>        
     
-</h2>
-<p>MD5 (Message Digest 5) is a cryptographic hash function that takes input data of any size and produces a fixed 128-bit (16-byte) hash value, typically represented as a 32-character hexadecimal string. Key properties:</p>
-<ul>
-<li><strong>Deterministic</strong>: Same input always produces the same hash</li>
-<li><strong>Fast computation</strong>: Quick to calculate</li>
-<li><strong>Avalanche effect</strong>: Small input changes create drastically different outputs</li>
-<li><strong>Fixed output size</strong>: Always 128 bits regardless of input size</li>
-</ul>
-<p>For BGP authentication, the hash is calculated over the BGP message plus the shared key, creating a unique fingerprint that proves the sender knows the secret.</p>
+</h4>
+<p>This option allows Virtual WAN routes to be propagated to existing traditional hub spoke environment. Without this, routes wont be learned and this option is not enabled by default.
 
-<h2 class="relative group">Benefits of Using MD5 Authentication 
-    <div id="benefits-of-using-md5-authentication" class="anchor"></div>
+
+
+
+
+
+
+<figure>
+      <img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="low"
+    alt="alt"
+    srcset="
+      /posts/vwanhubspokemigration/20250717223030_hu_636e476bc9638c23.png  330w,
+      /posts/vwanhubspokemigration/20250717223030_hu_9825bbfef6d32f.png  660w,
+      /posts/vwanhubspokemigration/20250717223030_hu_f08f610df535ba01.png 1280w
+    "
+    data-zoom-src="/posts/vwanhubspokemigration/20250717223030.png"
+    src="/posts/vwanhubspokemigration/20250717223030.png">
+
+  
+</figure>
+</p>
+
+<h4 class="relative group">Step 02 -&gt; Enable &ldquo;Allow traffic from non Virtual WAN networks&rdquo; in your Virtual WAN Hub 
+    <div id="step-02---enable-allow-traffic-from-non-virtual-wan-networks-in-your-virtual-wan-hub" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#benefits-of-using-md5-authentication" aria-label="Anchor">#</a>
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#step-02---enable-allow-traffic-from-non-virtual-wan-networks-in-your-virtual-wan-hub" aria-label="Anchor">#</a>
     </span>        
     
-</h2>
-<ol>
-<li><strong>Peer Authentication</strong>: Prevents unauthorized routers from establishing BGP sessions with your router</li>
-<li><strong>Message Integrity</strong>: Detects if BGP messages have been tampered with during transmission</li>
-<li><strong>Protection Against Injection</strong>: Stops attackers from injecting malicious route advertisements</li>
-<li><strong>Session Hijacking Prevention</strong>: Makes it extremely difficult for attackers to take over established BGP sessions</li>
-<li><strong>Compliance</strong>: Many enterprise and service provider networks require authentication for security policies</li>
-</ol>
+</h4>
+<p>This options allows routes learned by tranditional hub spoke environment to be propagated to Virtual WAN Hubs. This option is also disabled by default.
 
-<h2 class="relative group">Without MD5 Authentication 
-    <div id="without-md5-authentication" class="anchor"></div>
+
+
+
+
+
+
+<figure>
+      <img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="low"
+    alt="alt"
+    srcset="
+      /posts/vwanhubspokemigration/20250717223316_hu_1193b7a12d3df97e.png  330w,
+      /posts/vwanhubspokemigration/20250717223316_hu_3920b88319fa7b47.png  660w,
+      /posts/vwanhubspokemigration/20250717223316_hu_6ac763d97b6592e9.png 1280w
+    "
+    data-zoom-src="/posts/vwanhubspokemigration/20250717223316.png"
+    src="/posts/vwanhubspokemigration/20250717223316.png">
+
+  
+</figure>
+</p>
+
+<h4 class="relative group">Step 03 -&gt; Connect existing ExpressRoute Circuit to Virtual WAN Hub 
+    <div id="step-03---connect-existing-expressroute-circuit-to-virtual-wan-hub" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#without-md5-authentication" aria-label="Anchor">#</a>
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#step-03---connect-existing-expressroute-circuit-to-virtual-wan-hub" aria-label="Anchor">#</a>
     </span>        
     
-</h2>
-<p>When you don&rsquo;t use a shared key:</p>
-<ul>
-<li><strong>No Authentication</strong>: Any router that knows your IP address and AS number can potentially establish a BGP session</li>
-<li><strong>No Message Integrity</strong>: Corrupted or modified messages might be accepted</li>
-<li><strong>Vulnerability to Attacks</strong>: Susceptible to BGP hijacking, route injection, and man-in-the-middle attacks</li>
-<li><strong>Easier Misconfigurations</strong>: Accidental peering with wrong neighbors is more likely to succeed undetected</li>
-</ul>
-
-<h2 class="relative group">Important Security Note 
-    <div id="important-security-note" class="anchor"></div>
-    
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#important-security-note" aria-label="Anchor">#</a>
-    </span>        
-    
-</h2>
-<p>While MD5 was widely used historically, it&rsquo;s now considered cryptographically weak due to known collision vulnerabilities. Modern implementations should prefer stronger alternatives like SHA-256 or TCP Authentication Option (TCP-AO) where supported. However, MD5 authentication still provides significant security benefits over no authentication at all, especially in controlled environments like ExpressRoute where the physical infrastructure is managed by the service provider.</p>
+</h4>
+<p>This establishment allows routes to be exchanged between existing hub spoke environment and new virtual wan environment</p>
 <p>
 
 
@@ -646,16 +676,186 @@
     fetchpriority="low"
     alt="alt"
     srcset="
-      /posts/expressroute-shared-key/20250711230346_hu_5b9dd658f1f1cfed.png  330w,
-      /posts/expressroute-shared-key/20250711230346_hu_724a2b4d4b474d7c.png  660w,
-      /posts/expressroute-shared-key/20250711230346_hu_ba65e25dd70f2c82.png 1280w
+      /posts/vwanhubspokemigration/20250717223647_hu_b23fc611c09eb0fd.png  330w,
+      /posts/vwanhubspokemigration/20250717223647_hu_f5419108e82c0661.png  660w,
+      /posts/vwanhubspokemigration/20250717223647_hu_f85bd1893258b6ce.png 1280w
     "
-    data-zoom-src="/posts/expressroute-shared-key/20250711230346.png"
-    src="/posts/expressroute-shared-key/20250711230346.png">
+    data-zoom-src="/posts/vwanhubspokemigration/20250717223647.png"
+    src="/posts/vwanhubspokemigration/20250717223647.png">
+
+  
+</figure>
+
+Once we have established connectivity, next we can validate route exchange between existing and new environments</p>
+
+<h4 class="relative group">Step 04 - Verify Virtual WAN effective Routes 
+    <div id="step-04---verify-virtual-wan-effective-routes" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#step-04---verify-virtual-wan-effective-routes" aria-label="Anchor">#</a>
+    </span>        
+    
+</h4>
+<p>Effective routes show us learned routes and we can see routes learned via 12076 AS Path. These are routes learned from remote traditional hub spoke environment</p>
+<p>
+
+
+
+
+
+
+<figure>
+      <img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="low"
+    alt="alt"
+    srcset="
+      /posts/vwanhubspokemigration/20250717224027_hu_49aff6c26ccdbe2f.png  330w,
+      /posts/vwanhubspokemigration/20250717224027_hu_a317d92f5fdcb698.png  660w,
+      /posts/vwanhubspokemigration/20250717224027_hu_53c596b47da8aaf7.png 1280w
+    "
+    data-zoom-src="/posts/vwanhubspokemigration/20250717224027.png"
+    src="/posts/vwanhubspokemigration/20250717224027.png">
 
   
 </figure>
 </p>
+
+<h4 class="relative group">Step 05 - Verify Traditional Hub Spoke Environment 
+    <div id="step-05---verify-traditional-hub-spoke-environment" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#step-05---verify-traditional-hub-spoke-environment" aria-label="Anchor">#</a>
+    </span>        
+    
+</h4>
+<p>To verify traditional Hub Spoke environment, we will utilise powershell and list learned routes on the ExpressRoute Gateway</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-powershell" data-lang="powershell"><span class="line"><span class="cl"><span class="nv">$rg</span> <span class="p">=</span> <span class="s1">&#39;ntvwanmig-fvvw&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$gw</span> <span class="p">=</span> <span class="s1">&#39;ntvwanmig-ergw-fvvw&#39;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nb">Get-AzVirtualNetworkGatewayLearnedRoute</span> <span class="p">`</span>
+</span></span><span class="line"><span class="cl"><span class="n">-ResourceGroupName</span> <span class="nv">$rg</span> <span class="p">`</span>
+</span></span><span class="line"><span class="cl"><span class="n">-VirtualNetworkGatewayName</span> <span class="nv">$gw</span>
+</span></span></code></pre></div><p>Below is the output from traditional Hub Spoke ExpressRoute Gateway. This is demonstrating gateway learning routes from Virtual WAN environment via existing ExpressRoute Circuit and using AS Path 12076.
+
+
+
+
+
+
+
+<figure>
+      <img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="low"
+    alt="alt"
+    srcset="
+      /posts/vwanhubspokemigration/20250717224353_hu_3ca338bb2dc34068.png  330w,
+      /posts/vwanhubspokemigration/20250717224353_hu_8595d872513d9e02.png  660w,
+      /posts/vwanhubspokemigration/20250717224353_hu_ad23db35d9ada0e9.png 1280w
+    "
+    data-zoom-src="/posts/vwanhubspokemigration/20250717224353.png"
+    src="/posts/vwanhubspokemigration/20250717224353.png">
+
+  
+</figure>
+</p>
+<p>We can also verify routes learned by the ExpressRoute Circuit using below command</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-powershell" data-lang="powershell"><span class="line"><span class="cl"><span class="nv">$rg</span> <span class="p">=</span> <span class="s1">&#39;ntvwanmig-fvvw&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$erc</span> <span class="p">=</span> <span class="s1">&#39;ntvwanmig-er-circuit-fvvw&#39;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nb">Get-AzExpressRouteCircuitRouteTable</span> <span class="n">-ResourceGroupName</span> <span class="nv">$rg</span> <span class="p">`</span>
+</span></span><span class="line"><span class="cl"><span class="n">-ExpressRouteCircuitName</span> <span class="nv">$erc</span> <span class="p">`</span>
+</span></span><span class="line"><span class="cl"><span class="n">-PeeringType</span> <span class="s2">&#34;AzurePrivatePeering&#34;</span> <span class="p">`</span>
+</span></span><span class="line"><span class="cl"><span class="n">-DevicePath</span> <span class="s2">&#34;Primary&#34;</span>
+</span></span></code></pre></div><p>Below output confirms routes learned via traditional Hub Spoke ER Gateway and Virtual WAN Hub ER gateway. Note that these routes are all learned via AS 65515 which is assigned to each of the gateways in vWAN and Hub Spoken environment.
+
+
+
+
+
+
+
+<figure>
+      <img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="low"
+    alt="alt"
+    srcset="
+      /posts/vwanhubspokemigration/20250717224720_hu_4897306f92a1660b.png  330w,
+      /posts/vwanhubspokemigration/20250717224720_hu_fa063b227afc4058.png  660w,
+      /posts/vwanhubspokemigration/20250717224720_hu_a934bd3242f7bf90.png 1280w
+    "
+    data-zoom-src="/posts/vwanhubspokemigration/20250717224720.png"
+    src="/posts/vwanhubspokemigration/20250717224720.png">
+
+  
+</figure>
+</p>
+<p>VMs from existing environment can now reach new Virtual WAN environment
+
+
+
+
+
+
+
+<figure>
+      <img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="low"
+    alt="alt"
+    srcset="
+      /posts/vwanhubspokemigration/20250717230346_hu_cb7779626deb28b3.png  330w,
+      /posts/vwanhubspokemigration/20250717230346_hu_6b4f4295cb998d63.png  660w,
+      /posts/vwanhubspokemigration/20250717230346_hu_e8f84a9d840da1f9.png 1280w
+    "
+    data-zoom-src="/posts/vwanhubspokemigration/20250717230346.png"
+    src="/posts/vwanhubspokemigration/20250717230346.png">
+
+  
+</figure>
+</p>
+<p>I have also created a video demonstrating this scenario below
+<lite-youtube videoid="PjUiJUaWoWY" playlabel="PjUiJUaWoWY" params=""></lite-youtube>
+</p>
+
+<h2 class="relative group">Key Takeaways 
+    <div id="key-takeaways" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#key-takeaways" aria-label="Anchor">#</a>
+    </span>        
+    
+</h2>
+<ul>
+<li><strong>Planning is crucial:</strong> Understand your connectivity options before beginning migration</li>
+<li><strong>Configuration order matters:</strong> Follow the steps in sequence for successful coexistence</li>
+<li><strong>Verification is essential:</strong> Use both Azure portal and PowerShell to confirm proper route propagation</li>
+<li><strong>ExpressRoute is optimal:</strong> If already in use, ExpressRoute provides the most cost-effective coexistence solution</li>
+</ul>
+
+<h2 class="relative group">Conclusion 
+    <div id="conclusion" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#conclusion" aria-label="Anchor">#</a>
+    </span>        
+    
+</h2>
+<p>Establishing coexistence between traditional hub-and-spoke and Virtual WAN environments doesn&rsquo;t have to be complex. By following these configuration steps and properly verifying route propagation, you can ensure smooth connectivity during your migration process. This approach minimises downtime and reduces the risk associated with large-scale network changes.</p>
 
           
           
@@ -807,49 +1007,13 @@
           type="text/javascript"
           src="/js/page.min.54b6f4371722649edbe871e431d8670d670878c22be8f36e229fe53cc9b786fe25a834def5e6de621f7a3e37b72bc8cd73839aa5ed907ed6cbd45cd3e1b0fa20.js"
           integrity="sha512-VLb0NxciZJ7b6HHkMdhnDWcIeMIr6PNuIp/lPMm3hv4lqDTe9ebeYh96Pje3K8jNc4Oape2QftbL1FzT4bD6IA=="
-          data-oid="views_posts/ExpressRoute Shared Key/index.md"
-          data-oid-likes="likes_posts/ExpressRoute Shared Key/index.md"></script>
+          data-oid="views_posts/vWANHubSpokeMigration/index.md"
+          data-oid-likes="likes_posts/vWANHubSpokeMigration/index.md"></script>
       
 
     </section>
     <footer class="pt-8 max-w-prose print:hidden">
       
-  
-    
-    
-    
-    <div class="pt-8">
-      <hr class="border-dotted border-neutral-300 dark:border-neutral-600">
-      <div class="flex justify-between pt-3">
-        <span>
-          
-        </span>
-        <span>
-          
-            <a class="flex text-right group ml-3" href="/posts/vwanhubspokemigration/">
-              <span class="flex flex-col">
-                <span class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
-                  >Migrate from Hub-Spoke to Azure Virtual WAN ExpressRoute Coexistence Guide</span
-                >
-                <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
-                  
-                    <time datetime="2025-07-25T00:00:00&#43;00:00">2025-07-25</time>
-                  
-                </span>
-              </span>
-              <span
-                class="ml-3 text-neutral-700 group-hover:text-primary-600 ltr:inline rtl:hidden dark:text-neutral dark:group-hover:text-primary-400"
-                >&rarr;</span
-              >
-              <span
-                class="mr-3 text-neutral-700 group-hover:text-primary-600 ltr:hidden rtl:inline dark:text-neutral dark:group-hover:text-primary-400"
-                >&larr;</span
-              >
-            </a>
-          
-        </span>
-      </div>
-    </div>
   
 
 
