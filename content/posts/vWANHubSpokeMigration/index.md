@@ -2,6 +2,7 @@
 title: 'Migrate from Hub-Spoke to Azure Virtual WAN ExpressRoute Coexistence Guide'
 date: '2025-07-25'
 draft: false
+showComments: true
 ---
 
 ## Introduction 
