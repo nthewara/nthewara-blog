@@ -2,6 +2,7 @@
 title: 'Azure Extended Zone Connectivity to Virtual WAN'
 date: '2025-08-31'
 draft: false
+showComments: true
 ---
 
 
