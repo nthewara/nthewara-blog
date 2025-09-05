@@ -12,17 +12,36 @@ showComments: true
 
 This blog post shares an engineering validated pattern for establishing connectivity between Azure Extended Zones and Azure Virtual WAN environments. Currently, Virtual WAN hubs cannot be deployed within Extended Zones, so we need alternative approaches to bridge these environments.
 
-Below is a summary of connectivity options between Extended Zones and Azure regions:
+Below is a summary of connectivity options for Extended Zone
 
-## Connectivity Options for Extended Zone to Azure Region
 
-| Connectivity Method | Hub-Spoke Environment | Virtual WAN Environment |
-|-------------------|---------------------|----------------------|
-| **Global VNET Peering** | **Recommended option** for connecting Hub-Spoke network hubs | Not supported when hosting a gateway in Extended Zone VNET |
-| **SD-WAN Network Virtual Appliance** | Establish connectivity using SD-WAN tunnels | Establish connectivity using SD-WAN tunnels |
-| **ExpressRoute** | Not recommended due to added latency and bandwidth constraints | **Recommended option** given current lack of Virtual WAN hub support in Extended Zones |
 
-For this implementation, we'll use ExpressRoute to connect the Extended Zone environment to other Azure regions.
+## Connectivity Options for Extended Zones
+
+| Customer Scenario                                                                                     | Approach                                                                                                                                          |
+| ----------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Customer with Traditional Hub & Spoke VNET and looking to connect to Azure Region (eg Azure AU East)   | Utilise Global VNET Peering for connecting from Extended Zone to Azure Region                                                                     |
+| Customer with Traditional Hub & Spoke VNET and connect to on-premises (using Perth Edge)              | Utilise ExpressRoute Connectivity or SD-WAN / VPN Connectivity using Network Virtual Appliance (NVA)                                                                                  |
+| Customer with Virtual WAN and looking to connect to Azure Region from Extended Zone (eg Ex Zone Perth -> Azure AU East) | Create Traditional VNET Hub & Spoke pattern in Extended Zone and utilise ExpressRoute Circuit for connectivity to Virtual WAN Hub in Azure Region |
+
+
+## Supported Networking Services for Extended Zones (Sept-2025)
+
+- Virtual Network
+- Standard Public IP
+- Standard Load Balancer
+- ExpressRoute Circuits and ExpressRoute Gateways 
+- Virtual Network Peering (Local and Global)
+- Private Link 
+- Virtual Network Appliances (NVAs)
+
+### Services that are currently not available (Sept-2025)
+
+- Virtual WAN 
+- VPN Gateway
+
+
+For this blog post, we'll 3rd scenario where a customer already has Virtual WAN environment and looking to establish connectivity to Extended Zones
 
 ## Configuration 
 
