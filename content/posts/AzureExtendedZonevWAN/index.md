@@ -20,9 +20,9 @@ Below is a summary of connectivity options for Extended Zone
 
 | Customer Scenario                                                                                     | Approach                                                                                                                                          |
 | ----------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Customer with Traditional Hub & Spoke VNET and looking to connect to Azure Region (eg Azure AU East)   | Utilise Global VNET Peering for connecting from Extended Zone to Azure Region                                                                     |
-| Customer with Traditional Hub & Spoke VNET and connect to on-premises (using Perth Edge)              | Utilise ExpressRoute Connectivity or SD-WAN / VPN Connectivity using Network Virtual Appliance (NVA)                                                                                  |
-| Customer with Virtual WAN and looking to connect to Azure Region from Extended Zone (eg Ex Zone Perth -> Azure AU East) | Create Traditional VNET Hub & Spoke pattern in Extended Zone and utilise ExpressRoute Circuit for connectivity to Virtual WAN Hub in Azure Region |
+| Customer with Traditional Hub & Spoke VNet and looking to connect to Azure Region (eg Azure AU East)   | Utilise Global VNet Peering for connecting from Extended Zone to Azure Region                                                                     |
+| Customer with Traditional Hub & Spoke VNet and connect to on-premises (using Perth Edge)              | Utilise ExpressRoute Connectivity or SD-WAN / VPN Connectivity using Network Virtual Appliance (NVA)                                                                                  |
+| Customer with Virtual WAN and looking to connect to Azure Region from Extended Zone (eg Ex Zone Perth -> Azure AU East) | Create Traditional VNet Hub & Spoke pattern in Extended Zone and utilise ExpressRoute Circuit for connectivity to Virtual WAN hub in Azure Region |
 
 
 ## Supported Networking Services for Extended Zones (Sept-2025)
@@ -41,7 +41,7 @@ Below is a summary of connectivity options for Extended Zone
 - VPN Gateway
 
 
-For this blog post, we'll 3rd scenario where a customer already has Virtual WAN environment and looking to establish connectivity to Extended Zones
+For this blog post, we'll cover 3rd scenario where a customer already has Virtual WAN environment and looking to establish connectivity to Extended Zones
 
 ## Configuration 
 
@@ -52,9 +52,9 @@ This setup follows the same configuration pattern used for establishing coexiste
 - **Hub-Spoke ExpressRoute Gateway**: Enable "Allow traffic from remote Virtual WAN networks"
 - **Virtual WAN ExpressRoute Gateway**: Enable "Allow traffic from non Virtual WAN networks"
 
-Below is my ExpressRoute Gateway deployed to Extended Zone VNET. 
+Below is my ExpressRoute Gateway deployed to Extended Zone VNet. 
 ![alt](20250831082944.png)
-Below configuration enables ExpressRoute Gateway to recieve routes from Virtual WAN ExpressRoute Gateway
+Below configuration enables ExpressRoute Gateway to receive routes from Virtual WAN ExpressRoute Gateway
 ![alt](20250831083002.png)
 
 ## Validating Connectivity 
@@ -65,23 +65,23 @@ First, validate that VMs in the Extended Zone are learning routes from the Virtu
 
 ![alt](20250831092937.png)
 
-Effective routes from my VM in Perth Extended Zone shows routes learned from ExpressRoute Gateway and these are remote routes from my Virtual WAN environment.
+Effective routes from my VM in Perth Extended Zone show routes learned from ExpressRoute Gateway and these are remote routes from my Virtual WAN environment.
 
 ![alt](20250831093034.png)
 
 ### Step 2: Validate Virtual WAN Environment Routes 
 
-Next, verify that VMs connected to the Virtual WAN hub are learning Extended Zone VNET prefixes.
+Next, verify that VMs connected to the Virtual WAN hub are learning Extended Zone VNet prefixes.
 
 ![alt](20250831094511.png)
 
-Below routes are learned by my virtual machine connected to Virtual WAN hub that is hosting ExpressRoute Gateway and we are able to see Extended Zone VNET prefixes are learned by the network interface attached to my VM.
+Below routes are learned by my virtual machine connected to Virtual WAN hub that is hosting ExpressRoute Gateway and we are able to see Extended Zone VNet prefixes are learned by the network interface attached to my VM.
 
 ![alt](20250831094601.png)
 
-### Step 3: Check Virtual WAN Hub Effective Routes
+### Step 3: Check Virtual WAN hub Effective Routes
 
-For deeper insight into routing behavior, examine the effective routes from the Virtual WAN Hub. This view helps understand:
+For deeper insight into routing behavior, examine the effective routes from the Virtual WAN hub. This view helps understand:
 - AS Path information
 - All prefixes learned by the ExpressRoute Gateway
 - Route propagation between environments
@@ -92,7 +92,7 @@ For deeper insight into routing behavior, examine the effective routes from the 
 {{< alert icon="lightbulb" cardColor="#0077be" iconColor="#ffffff" textColor="#ffffff" >}}
 **Bandwidth Constraints**: ExpressRoute Gateway bandwidth is limited by the gateway SKU configuration
 
-**Additional Latency**: The gateway hop introduces extra latency to traffic flows between environments
+**Additional Latency**: The gateway hop introduces additional latency to traffic flows between environments
 {{< /alert >}}
 
 ## Conclusion 
