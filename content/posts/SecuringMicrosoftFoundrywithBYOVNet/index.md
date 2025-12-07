@@ -40,7 +40,7 @@ Foundry team has published templates for both [Bicep](https://github.com/azure-a
 
 **1. Agent Subnet with Delegation**
 - Recommended minimum size: /26 or larger depending on scale requirements
-- Agent subnet delegated to Foundry with Subnet delegating using "Microsoft.App/environments" as below 
+- Agent subnet delegated to Foundry with Subnet delegation using "Microsoft.App/environments" as below
 ![20251204054834](20251204054834.png)
 
 **2. Private Endpoints Subnet**
@@ -132,7 +132,7 @@ After deployment, validate Microsoft Foundry Agent service functions correctly:
 
 Use Microsoft Foundry Portal to create and configure a new agent. Successful agent creation indicates proper network connectivity and resource access.
 
-![[Pasted image 20251206165637.png | 500]]
+![20251206165637](20251206165637.png)
 
 ### 2. Upload Knowledge Files
 
@@ -147,7 +147,7 @@ Test file upload functionality, which demonstrates:
 Validate agent responses using the chat playground. This tests:
 - End to end agent functionality
 - Knowledge retrieval from vector store
-- OpenAI service connectivity
+- LLM endpoint connectivity (Using GPT4o in this example)
 ![20251206172131](20251206172131.png)
 Thread logs functionality to trace requests
 ![20251206171540](20251206171540.png)

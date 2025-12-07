@@ -636,7 +636,7 @@ In this blog post, I&rsquo;m sharing lessons learned from a recent Microsoft Fou
 <p><strong>1. Agent Subnet with Delegation</strong></p>
 <ul>
 <li>Recommended minimum size: /26 or larger depending on scale requirements</li>
-<li>Agent subnet delegated to Foundry with Subnet delegating using &ldquo;Microsoft.App/environments&rdquo; as below
+<li>Agent subnet delegated to Foundry with Subnet delegation using &ldquo;Microsoft.App/environments&rdquo; as below
 
 
 
@@ -1103,7 +1103,31 @@ Azure Storage Network configuration - Disabled Public Access
     
 </h3>
 <p>Use Microsoft Foundry Portal to create and configure a new agent. Successful agent creation indicates proper network connectivity and resource access.</p>
-<p>![[Pasted image 20251206165637.png | 500]]</p>
+<p>
+
+
+
+
+
+
+<figure>
+      <img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="low"
+    alt="20251206165637"
+    srcset="
+      /posts/securingmicrosoftfoundrywithbyovnet/20251206165637_hu_556cc649474d1a07.png  330w,
+      /posts/securingmicrosoftfoundrywithbyovnet/20251206165637_hu_fefc336e703d63dc.png  660w,
+      /posts/securingmicrosoftfoundrywithbyovnet/20251206165637_hu_283948f7da251e5d.png 1280w
+    "
+    data-zoom-src="/posts/securingmicrosoftfoundrywithbyovnet/20251206165637.png"
+    src="/posts/securingmicrosoftfoundrywithbyovnet/20251206165637.png">
+
+  
+</figure>
+</p>
 
 <h3 class="relative group">2. Upload Knowledge Files 
     <div id="2-upload-knowledge-files" class="anchor"></div>
@@ -1159,7 +1183,7 @@ Azure Storage Network configuration - Disabled Public Access
 <ul>
 <li>End to end agent functionality</li>
 <li>Knowledge retrieval from vector store</li>
-<li>OpenAI service connectivity
+<li>LLM endpoint connectivity (Using GPT4o in this example)
 
 
 
