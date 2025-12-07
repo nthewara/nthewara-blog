@@ -9,14 +9,17 @@ showComments: true
 
 ## Introduction 
 Microsoft Foundry (Previously called AI Foundry) provides powerful capabilities for building and deploying AI agents and solutions. For enterprise customers, securing these deployments within their own network infrastructure is critical for compliance, governance, and integration with existing landing zones. The Bring Your Own (BYO) VNET deployment pattern enables organizations to secure and control both inbound and outbound access to Foundry Agent services while maintaining network isolation. 
-In this blog post, I'm sharing lessons learned from a recent Microsoft Foundry Agent Service deployment utilizing the BYO VNET pattern. This approach is particularly valuable for organizations that need to: 
-- Integrate Microsoft Foundry with existing hub-and-spoke network architectures 
+In this blog post, I'm sharing lessons learned from a recent Microsoft Foundry Agent Service deployment utilising the BYO VNET pattern. This approach is particularly valuable for organizations that need to: 
+- Integrate Microsoft Foundry with existing hub and spoke network architecture
 - Enforce strict network security policies 
 - Maintain compliance with regulatory requirements 
 - Control data flow and access patterns
   
 ### Understanding AI Foundry Versions
+
+{{< alert icon="lightbulb" cardColor="#0077be" iconColor="#ffffff" textColor="#ffffff" >}}
 It's important to note that there are multiple versions of AI Foundry in documentation. This blog focuses on **Microsoft Foundry Classic** Service. For a detailed explanation of the differences between Hub based and Projectbased Foundry experiences, refer to [this blog](https://techcommunity.microsoft.com/blog/azure-ai-foundry-blog/build-recap-new-azure-ai-foundry-resource-developer-apis-and-tools/4427241).
+{{< /alert >}}
 
 ## Security Architecture Overview 
 When deploying Microsoft Foundry using the BYO VNET approach, there are three critical security layers to configure: 
