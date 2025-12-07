@@ -21,11 +21,12 @@ In this blog post, I'm sharing lessons learned from a recent Microsoft Foundry A
 It's important to note that there are multiple versions of AI Foundry in documentation. This blog focuses on **Microsoft Foundry Classic** Service. For a detailed explanation of the differences between Hub based and Projectbased Foundry experiences, refer to [this blog](https://techcommunity.microsoft.com/blog/azure-ai-foundry-blog/build-recap-new-azure-ai-foundry-resource-developer-apis-and-tools/4427241).
 {{< /alert >}}
 
-## Security Architecture Overview 
-When deploying Microsoft Foundry using the BYO VNET approach, there are three critical security layers to configure: 
+## Network Security Architecture Overview
 
-1. **Individual Resource Configuration** - Network access settings for each Azure resource 
-2. **Network Security Groups (NSGs)** - Subnet level traffic filtering for the delegated Microsoft Foundry subnet 
+When deploying Microsoft Foundry using the BYO VNET approach, there are three critical security layers to configure:
+
+1. **Individual Resource Configuration** - Network access settings for each Azure resource
+2. **Network Security Groups (NSGs)** - Subnet level traffic filtering for the delegated Microsoft Foundry subnet
 3. **Azure Firewall Configuration** - Centralised outbound access control
 
 ## Prerequisites 
