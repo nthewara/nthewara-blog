@@ -132,7 +132,7 @@
     
     
     "mainEntityOfPage": "true",
-    "wordCount": "1136"
+    "wordCount": "1032"
   }]
   </script>
 
@@ -464,7 +464,7 @@
   <div class="flex flex-row flex-wrap items-center">
     
     
-      <time datetime="2025-12-07T00:00:00&#43;00:00">2025-12-07</time><span class="px-2 text-primary-500">&middot;</span><span>1136 words</span><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">6 mins</span>
+      <time datetime="2025-12-07T00:00:00&#43;00:00">2025-12-07</time><span class="px-2 text-primary-500">&middot;</span><span>1032 words</span><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">5 mins</span>
     
 
     
@@ -506,7 +506,31 @@
         
 
         <div class="article-content max-w-prose mb-20">
-          <p>![[Pasted image 20251207080909.png | 500]]</p>
+          <p>
+
+
+
+
+
+
+<figure>
+      <img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="low"
+    alt="alt"
+    srcset="
+      /posts/securingmicrosoftfoundrywithbyovnet/20251207080909_hu_8928fa3657694979.png  330w,
+      /posts/securingmicrosoftfoundrywithbyovnet/20251207080909_hu_4d4ec575f21b7ece.png  660w,
+      /posts/securingmicrosoftfoundrywithbyovnet/20251207080909_hu_58fe08595de5182f.png 1280w
+    "
+    data-zoom-src="/posts/securingmicrosoftfoundrywithbyovnet/20251207080909.png"
+    src="/posts/securingmicrosoftfoundrywithbyovnet/20251207080909.png">
+
+  
+</figure>
+</p>
 
 <h2 class="relative group">Introduction 
     <div id="introduction" class="anchor"></div>
@@ -591,7 +615,31 @@ In this blog post, I&rsquo;m sharing lessons learned from a recent Microsoft Fou
 <ul>
 <li>Recommended minimum size: /26 or larger depending on scale requirements</li>
 <li>Agent subnet delegated to Foundry with Subnet delegating using &ldquo;Microsoft.App/environments&rdquo; as below
-![[Pasted image 20251204054834.png | 500]]</li>
+
+
+
+
+
+
+
+<figure>
+      <img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="low"
+    alt="20251204054834"
+    srcset="
+      /posts/securingmicrosoftfoundrywithbyovnet/20251204054834_hu_5689660784ada0b8.png  330w,
+      /posts/securingmicrosoftfoundrywithbyovnet/20251204054834_hu_c5c444d94738343e.png  660w,
+      /posts/securingmicrosoftfoundrywithbyovnet/20251204054834_hu_fa3915bcaae292bd.png 1280w
+    "
+    data-zoom-src="/posts/securingmicrosoftfoundrywithbyovnet/20251204054834.png"
+    src="/posts/securingmicrosoftfoundrywithbyovnet/20251204054834.png">
+
+  
+</figure>
+</li>
 </ul>
 <p><strong>2. Private Endpoints Subnet</strong></p>
 <ul>
@@ -667,9 +715,33 @@ In this blog post, I&rsquo;m sharing lessons learned from a recent Microsoft Fou
 <ul>
 <li>Destination: - 100.100.0.0/17, 100.100.128.0/19,100.100.160.0/19,100.100.192.0/19</li>
 <li>Container Apps uses this range for internal platform communication</li>
-<li>Ports: Any</li>
+<li>Ports: Any
+
+
+
+
+
+
+
+<figure>
+      <img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="low"
+    alt="20251206134928"
+    srcset="
+      /posts/securingmicrosoftfoundrywithbyovnet/20251206134928_hu_de4072fc1a4546eb.png  330w,
+      /posts/securingmicrosoftfoundrywithbyovnet/20251206134928_hu_5c7d5662962ff6df.png  660w,
+      /posts/securingmicrosoftfoundrywithbyovnet/20251206134928_hu_f8bcb8ec390f23b1.png 1280w
+    "
+    data-zoom-src="/posts/securingmicrosoftfoundrywithbyovnet/20251206134928.png"
+    src="/posts/securingmicrosoftfoundrywithbyovnet/20251206134928.png">
+
+  
+</figure>
+</li>
 </ul>
-<p>![[Pasted image 20251206134928.png]]</p>
 
 <h3 class="relative group">Azure Firewall Configuration 
     <div id="azure-firewall-configuration" class="anchor"></div>
@@ -701,8 +773,56 @@ In this blog post, I&rsquo;m sharing lessons learned from a recent Microsoft Fou
 <li><code>InternalACATraffic</code>
 <strong>Key Configuration Note:</strong> Create an IP Group containing the Container Apps internal IP ranges (100.64.0.0/10, 100.100.0.0/17, 100.100.128.0/19, 100.100.160.0/19, 100.100.192.0/19) to use as source addresses in firewall rules.</li>
 </ul>
-<p>![[Pasted image 20251206143806.png | 500]]</p>
-<p>![[Pasted image 20251206143750.png | 500]]</p>
+<p>
+
+
+
+
+
+
+<figure>
+      <img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="low"
+    alt="20251206143806"
+    srcset="
+      /posts/securingmicrosoftfoundrywithbyovnet/20251206143806_hu_7da5287725942a1.png  330w,
+      /posts/securingmicrosoftfoundrywithbyovnet/20251206143806_hu_6c9bbd5ae0f13ff9.png  660w,
+      /posts/securingmicrosoftfoundrywithbyovnet/20251206143806_hu_b431d9ec30cd2755.png 1280w
+    "
+    data-zoom-src="/posts/securingmicrosoftfoundrywithbyovnet/20251206143806.png"
+    src="/posts/securingmicrosoftfoundrywithbyovnet/20251206143806.png">
+
+  
+</figure>
+</p>
+<p>
+
+
+
+
+
+
+<figure>
+      <img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="low"
+    alt="20251206143750"
+    srcset="
+      /posts/securingmicrosoftfoundrywithbyovnet/20251206143750_hu_f6b0890723bbcbfa.png  330w,
+      /posts/securingmicrosoftfoundrywithbyovnet/20251206143750_hu_ff3db8251610db58.png  660w,
+      /posts/securingmicrosoftfoundrywithbyovnet/20251206143750_hu_fa43983584ad17cf.png 1280w
+    "
+    data-zoom-src="/posts/securingmicrosoftfoundrywithbyovnet/20251206143750.png"
+    src="/posts/securingmicrosoftfoundrywithbyovnet/20251206143750.png">
+
+  
+</figure>
+</p>
 
 <h3 class="relative group">Application Rules Configuration 
     <div id="application-rules-configuration" class="anchor"></div>
@@ -714,7 +834,31 @@ In this blog post, I&rsquo;m sharing lessons learned from a recent Microsoft Fou
     
 </h3>
 <p>Application rules provide FQDN-based filtering for outbound HTTPS traffic to specific domains required by AI Foundry services.</p>
-<p>![[Pasted image 20251206163443.png]]</p>
+<p>
+
+
+
+
+
+
+<figure>
+      <img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="low"
+    alt="20251206163443"
+    srcset="
+      /posts/securingmicrosoftfoundrywithbyovnet/20251206163443_hu_b93ed53e45031264.png  330w,
+      /posts/securingmicrosoftfoundrywithbyovnet/20251206163443_hu_be40c73a942bf768.png  660w,
+      /posts/securingmicrosoftfoundrywithbyovnet/20251206163443_hu_619d9bb1effd2bf8.png 1280w
+    "
+    data-zoom-src="/posts/securingmicrosoftfoundrywithbyovnet/20251206163443.png"
+    src="/posts/securingmicrosoftfoundrywithbyovnet/20251206163443.png">
+
+  
+</figure>
+</p>
 
 <h3 class="relative group">Resource Configuration 
     <div id="resource-configuration" class="anchor"></div>
@@ -727,15 +871,135 @@ In this blog post, I&rsquo;m sharing lessons learned from a recent Microsoft Fou
 </h3>
 <p>All AI Foundry project resources should be configured with network security in mind and with disabled public access.</p>
 <p>AI Foundry resource network configuration below
-![[Pasted image 20251206172829.png | 500]]
+
+
+
+
+
+
+
+<figure>
+      <img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="low"
+    alt="20251206172829"
+    srcset="
+      /posts/securingmicrosoftfoundrywithbyovnet/20251206172829_hu_838ce36c9fbead3b.png  330w,
+      /posts/securingmicrosoftfoundrywithbyovnet/20251206172829_hu_b2c72d7bf8193696.png  660w,
+      /posts/securingmicrosoftfoundrywithbyovnet/20251206172829_hu_9795bf2dfbf19be9.png 1280w
+    "
+    data-zoom-src="/posts/securingmicrosoftfoundrywithbyovnet/20251206172829.png"
+    src="/posts/securingmicrosoftfoundrywithbyovnet/20251206172829.png">
+
+  
+</figure>
+
 Delegated subnet configuration
-![[Pasted image 20251206172848.png | 500]]
+
+
+
+
+
+
+
+<figure>
+      <img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="low"
+    alt="20251206172848"
+    srcset="
+      /posts/securingmicrosoftfoundrywithbyovnet/20251206172848_hu_352907cc9cce49f8.png  330w,
+      /posts/securingmicrosoftfoundrywithbyovnet/20251206172848_hu_1c455372b4cf2516.png  660w,
+      /posts/securingmicrosoftfoundrywithbyovnet/20251206172848_hu_e33aeae5176aa2c6.png 1280w
+    "
+    data-zoom-src="/posts/securingmicrosoftfoundrywithbyovnet/20251206172848.png"
+    src="/posts/securingmicrosoftfoundrywithbyovnet/20251206172848.png">
+
+  
+</figure>
+
 Cosmos DB Network configuration - Disabled Public Access
-![[Pasted image 20251206172920.png | 500]]
+
+
+
+
+
+
+
+<figure>
+      <img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="low"
+    alt="20251206172920"
+    srcset="
+      /posts/securingmicrosoftfoundrywithbyovnet/20251206172920_hu_54e5034995b50621.png  330w,
+      /posts/securingmicrosoftfoundrywithbyovnet/20251206172920_hu_eb6fcb7481296f3f.png  660w,
+      /posts/securingmicrosoftfoundrywithbyovnet/20251206172920_hu_9a21c5b55c4cb559.png 1280w
+    "
+    data-zoom-src="/posts/securingmicrosoftfoundrywithbyovnet/20251206172920.png"
+    src="/posts/securingmicrosoftfoundrywithbyovnet/20251206172920.png">
+
+  
+</figure>
+
 AI Search Network configuration - Disabled Public Access
-![[Pasted image 20251206172943.png | 500]]
+
+
+
+
+
+
+
+<figure>
+      <img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="low"
+    alt="20251206172943"
+    srcset="
+      /posts/securingmicrosoftfoundrywithbyovnet/20251206172943_hu_8c789e1167e3ba0c.png  330w,
+      /posts/securingmicrosoftfoundrywithbyovnet/20251206172943_hu_4178df936a19b882.png  660w,
+      /posts/securingmicrosoftfoundrywithbyovnet/20251206172943_hu_6a0bd83dce883d96.png 1280w
+    "
+    data-zoom-src="/posts/securingmicrosoftfoundrywithbyovnet/20251206172943.png"
+    src="/posts/securingmicrosoftfoundrywithbyovnet/20251206172943.png">
+
+  
+</figure>
+
 Azure Storage Network configuration - Disabled Public Access
-![[Pasted image 20251206173023.png | 500]]</p>
+
+
+
+
+
+
+
+<figure>
+      <img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="low"
+    alt="20251206173023"
+    srcset="
+      /posts/securingmicrosoftfoundrywithbyovnet/20251206173023_hu_b053aab5722d7578.png  330w,
+      /posts/securingmicrosoftfoundrywithbyovnet/20251206173023_hu_62369c34bc9b7932.png  660w,
+      /posts/securingmicrosoftfoundrywithbyovnet/20251206173023_hu_85778c4ff6e2c9b8.png 1280w
+    "
+    data-zoom-src="/posts/securingmicrosoftfoundrywithbyovnet/20251206173023.png"
+    src="/posts/securingmicrosoftfoundrywithbyovnet/20251206173023.png">
+
+  
+</figure>
+</p>
 
 <h3 class="relative group">Foundry Agent Validation 
     <div id="foundry-agent-validation" class="anchor"></div>
@@ -747,7 +1011,31 @@ Azure Storage Network configuration - Disabled Public Access
     
 </h3>
 <p>After deployment, validate that the AI Foundry Agent service functions correctly:</p>
-<p>![[Pasted image 20251206163823.png | 500]]</p>
+<p>
+
+
+
+
+
+
+<figure>
+      <img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="low"
+    alt="20251206163823"
+    srcset="
+      /posts/securingmicrosoftfoundrywithbyovnet/20251206163823_hu_87b31e40ec611fba.png  330w,
+      /posts/securingmicrosoftfoundrywithbyovnet/20251206163823_hu_74dc79430564cdac.png  660w,
+      /posts/securingmicrosoftfoundrywithbyovnet/20251206163823_hu_704410ab18a89ee1.png 1280w
+    "
+    data-zoom-src="/posts/securingmicrosoftfoundrywithbyovnet/20251206163823.png"
+    src="/posts/securingmicrosoftfoundrywithbyovnet/20251206163823.png">
+
+  
+</figure>
+</p>
 
 <h3 class="relative group">1. Create a New Agent 
     <div id="1-create-a-new-agent" class="anchor"></div>
@@ -775,7 +1063,31 @@ Azure Storage Network configuration - Disabled Public Access
 <li>Azure Storage connectivity via private endpoint</li>
 <li>AI Search integration for vector database population</li>
 <li>Authentication through Entra ID
-![[Pasted image 20251206165735.png|500]]</li>
+
+
+
+
+
+
+
+<figure>
+      <img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="low"
+    alt="20251206165735"
+    srcset="
+      /posts/securingmicrosoftfoundrywithbyovnet/20251206165735_hu_596104123e2db135.png  330w,
+      /posts/securingmicrosoftfoundrywithbyovnet/20251206165735_hu_afc974e9d81086ec.png  660w,
+      /posts/securingmicrosoftfoundrywithbyovnet/20251206165735_hu_9e40dfc775d96434.png 1280w
+    "
+    data-zoom-src="/posts/securingmicrosoftfoundrywithbyovnet/20251206165735.png"
+    src="/posts/securingmicrosoftfoundrywithbyovnet/20251206165735.png">
+
+  
+</figure>
+</li>
 </ul>
 
 <h3 class="relative group">3. Test Chat Playground 
@@ -792,12 +1104,84 @@ Azure Storage Network configuration - Disabled Public Access
 <li>End-to-end agent functionality</li>
 <li>Knowledge retrieval from vector store</li>
 <li>OpenAI service connectivity
-![[Pasted image 20251206171457.png | 500]]
+
+
+
+
+
+
+
+<figure>
+      <img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="low"
+    alt="20251206172131"
+    srcset="
+      /posts/securingmicrosoftfoundrywithbyovnet/20251206172131_hu_96d440bf10f49349.png  330w,
+      /posts/securingmicrosoftfoundrywithbyovnet/20251206172131_hu_85ea2138eab7edf6.png  660w,
+      /posts/securingmicrosoftfoundrywithbyovnet/20251206172131_hu_be08a4b686bb2b64.png 1280w
+    "
+    data-zoom-src="/posts/securingmicrosoftfoundrywithbyovnet/20251206172131.png"
+    src="/posts/securingmicrosoftfoundrywithbyovnet/20251206172131.png">
+
+  
+</figure>
+
 Thread logs functionality to trace requests
-![[Pasted image 20251206171540.png | 500]]</li>
+
+
+
+
+
+
+
+<figure>
+      <img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="low"
+    alt="20251206171540"
+    srcset="
+      /posts/securingmicrosoftfoundrywithbyovnet/20251206171540_hu_d563708d66d22648.png  330w,
+      /posts/securingmicrosoftfoundrywithbyovnet/20251206171540_hu_81bca1c97b5abeb.png  660w,
+      /posts/securingmicrosoftfoundrywithbyovnet/20251206171540_hu_6c48313c1db88db2.png 1280w
+    "
+    data-zoom-src="/posts/securingmicrosoftfoundrywithbyovnet/20251206171540.png"
+    src="/posts/securingmicrosoftfoundrywithbyovnet/20251206171540.png">
+
+  
+</figure>
+</li>
 </ul>
 <p>This is another example where we are asking a relevant question with the knowledge provided (Microsoft annual report 2025). We get expected response with reference to uploaded content.</p>
-<p>![[Pasted image 20251206172131.png | 500]]</p>
+<p>
+
+
+
+
+
+
+<figure>
+      <img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="low"
+    alt="20251206172131"
+    srcset="
+      /posts/securingmicrosoftfoundrywithbyovnet/20251206172131_hu_96d440bf10f49349.png  330w,
+      /posts/securingmicrosoftfoundrywithbyovnet/20251206172131_hu_85ea2138eab7edf6.png  660w,
+      /posts/securingmicrosoftfoundrywithbyovnet/20251206172131_hu_be08a4b686bb2b64.png 1280w
+    "
+    data-zoom-src="/posts/securingmicrosoftfoundrywithbyovnet/20251206172131.png"
+    src="/posts/securingmicrosoftfoundrywithbyovnet/20251206172131.png">
+
+  
+</figure>
+</p>
 
 <h3 class="relative group">4. Review Thread Logs 
     <div id="4-review-thread-logs" class="anchor"></div>
@@ -813,7 +1197,31 @@ Thread logs functionality to trace requests
 <li>Observe tool calls against the vector store</li>
 <li>Validate response generation</li>
 <li>Troubleshoot any issues with agent behavior
-![[Pasted image 20251206172202.png | 500]]</li>
+
+
+
+
+
+
+
+<figure>
+      <img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="low"
+    alt="20251206172202"
+    srcset="
+      /posts/securingmicrosoftfoundrywithbyovnet/20251206172202_hu_c7fdab9585921b0c.png  330w,
+      /posts/securingmicrosoftfoundrywithbyovnet/20251206172202_hu_ac4e44c4533df2bc.png  660w,
+      /posts/securingmicrosoftfoundrywithbyovnet/20251206172202_hu_c1eafce79022f1ba.png 1280w
+    "
+    data-zoom-src="/posts/securingmicrosoftfoundrywithbyovnet/20251206172202.png"
+    src="/posts/securingmicrosoftfoundrywithbyovnet/20251206172202.png">
+
+  
+</figure>
+</li>
 </ul>
 
 <h3 class="relative group">Observability 
@@ -838,9 +1246,57 @@ Thread logs functionality to trace requests
 </h4>
 <p>Having logs enabled on the firewall allows us to observe traffic flows from AI Foundry delegated subnet. Below is the behaviour. We can see communication from Foundry subnet, towards Microsoft Container Registry and towards Azure Container Apps endpoints.</p>
 <p>Application Rule Logs below
-![[Pasted image 20251206144211.png | 500]]</p>
+
+
+
+
+
+
+
+<figure>
+      <img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="low"
+    alt="20251206144211"
+    srcset="
+      /posts/securingmicrosoftfoundrywithbyovnet/20251206144211_hu_fee2464353696bca.png  330w,
+      /posts/securingmicrosoftfoundrywithbyovnet/20251206144211_hu_1e68d4ab3cd7909a.png  660w,
+      /posts/securingmicrosoftfoundrywithbyovnet/20251206144211_hu_7f8cfef2f1d2708a.png 1280w
+    "
+    data-zoom-src="/posts/securingmicrosoftfoundrywithbyovnet/20251206144211.png"
+    src="/posts/securingmicrosoftfoundrywithbyovnet/20251206144211.png">
+
+  
+</figure>
+</p>
 <p>Network Rule Logs below
-![[Pasted image 20251206144048.png | 500]]</p>
+
+
+
+
+
+
+
+<figure>
+      <img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="low"
+    alt="20251206144048"
+    srcset="
+      /posts/securingmicrosoftfoundrywithbyovnet/20251206144048_hu_2f7ee9910fd24969.png  330w,
+      /posts/securingmicrosoftfoundrywithbyovnet/20251206144048_hu_f85eeec08aa967a6.png  660w,
+      /posts/securingmicrosoftfoundrywithbyovnet/20251206144048_hu_8b340225519f3408.png 1280w
+    "
+    data-zoom-src="/posts/securingmicrosoftfoundrywithbyovnet/20251206144048.png"
+    src="/posts/securingmicrosoftfoundrywithbyovnet/20251206144048.png">
+
+  
+</figure>
+</p>
 
 <h4 class="relative group">Observability -&gt; VNET Flow Logs 
     <div id="observability---vnet-flow-logs" class="anchor"></div>
@@ -852,7 +1308,31 @@ Thread logs functionality to trace requests
     
 </h4>
 <p>Below are logs from the VNET hosting agents. We can observe ACA Traffic reaching Microsoft managed endpoinst
-![[Pasted image 20251206175211.png | 500]]</p>
+
+
+
+
+
+
+
+<figure>
+      <img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="low"
+    alt="20251206175211"
+    srcset="
+      /posts/securingmicrosoftfoundrywithbyovnet/20251206175211_hu_316a386f79a46a29.png  330w,
+      /posts/securingmicrosoftfoundrywithbyovnet/20251206175211_hu_4d2a33ca6fa5e4f6.png  660w,
+      /posts/securingmicrosoftfoundrywithbyovnet/20251206175211_hu_6fb84dae24690ac2.png 1280w
+    "
+    data-zoom-src="/posts/securingmicrosoftfoundrywithbyovnet/20251206175211.png"
+    src="/posts/securingmicrosoftfoundrywithbyovnet/20251206175211.png">
+
+  
+</figure>
+</p>
 
 <h4 class="relative group">Observability -&gt; AI Foundry Logs 
     <div id="observability---ai-foundry-logs" class="anchor"></div>
@@ -864,7 +1344,31 @@ Thread logs functionality to trace requests
     
 </h4>
 <p>Foundry Logs also demonstrates requests from User towards Foundry Private Endpoints and other services reaching foundry service.
-![[Pasted image 20251204061350.png | 500]]</p>
+
+
+
+
+
+
+
+<figure>
+      <img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="low"
+    alt="20251204061350"
+    srcset="
+      /posts/securingmicrosoftfoundrywithbyovnet/20251204061350_hu_d6ba161f61d03923.png  330w,
+      /posts/securingmicrosoftfoundrywithbyovnet/20251204061350_hu_63e54d9da975d9ac.png  660w,
+      /posts/securingmicrosoftfoundrywithbyovnet/20251204061350_hu_2e2c1648951cfccb.png 1280w
+    "
+    data-zoom-src="/posts/securingmicrosoftfoundrywithbyovnet/20251204061350.png"
+    src="/posts/securingmicrosoftfoundrywithbyovnet/20251204061350.png">
+
+  
+</figure>
+</p>
 
 <h4 class="relative group">Observability -&gt; CosmosDB Logs 
     <div id="observability---cosmosdb-logs" class="anchor"></div>
@@ -876,7 +1380,31 @@ Thread logs functionality to trace requests
     
 </h4>
 <p>We are also able to see request logs from CosmosDB Logs showcasing request from Agent delegated Subnet.
-![[Pasted image 20251204061529.png | 500]]</p>
+
+
+
+
+
+
+
+<figure>
+      <img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="low"
+    alt="20251204061529"
+    srcset="
+      /posts/securingmicrosoftfoundrywithbyovnet/20251204061529_hu_1e697a7efe4470fb.png  330w,
+      /posts/securingmicrosoftfoundrywithbyovnet/20251204061529_hu_53c17ab91d6a3b90.png  660w,
+      /posts/securingmicrosoftfoundrywithbyovnet/20251204061529_hu_7b61ce2f055e11a0.png 1280w
+    "
+    data-zoom-src="/posts/securingmicrosoftfoundrywithbyovnet/20251204061529.png"
+    src="/posts/securingmicrosoftfoundrywithbyovnet/20251204061529.png">
+
+  
+</figure>
+</p>
 
 <h2 class="relative group">Conclusion 
     <div id="conclusion" class="anchor"></div>

@@ -5,7 +5,7 @@ draft: true
 showComments: true
 ---
 
-![[Pasted image 20251207080909.png | 500]]
+![alt](20251207080909.png)
 
 ## Introduction 
 Microsoft Foundry (Previously called AI Foundry) provides powerful capabilities for building and deploying AI agents and solutions. For enterprise customers, securing these deployments within their own network infrastructure is critical for compliance, governance, and integration with existing landing zones. The Bring Your Own (BYO) VNET deployment pattern enables organizations to secure and control both inbound and outbound access to Foundry Agent services while maintaining network isolation. 
@@ -38,7 +38,7 @@ Foundry team has published templates for both [Bicep](https://github.com/azure-a
 **1. Agent Subnet with Delegation**
 - Recommended minimum size: /26 or larger depending on scale requirements
 - Agent subnet delegated to Foundry with Subnet delegating using "Microsoft.App/environments" as below 
-![[Pasted image 20251204054834.png | 500]]
+![20251204054834](20251204054834.png)
 
 **2. Private Endpoints Subnet**
 - Dedicated subnet for hosting private endpoints to AI Foundry resources
@@ -80,8 +80,8 @@ NSG configuration is critical for controlling outbound access from the AI Foundr
 - Destination: - 100.100.0.0/17, 100.100.128.0/19,100.100.160.0/19,100.100.192.0/19
 - Container Apps uses this range for internal platform communication
 - Ports: Any
+![20251206134928](20251206134928.png)
 
-![[Pasted image 20251206134928.png]]
 ### Azure Firewall Configuration
 Azure Firewall provides centralized control over outbound traffic from the AI Foundry environment. The firewall processes rules in the following order:  
 
@@ -93,31 +93,31 @@ Configure network rules to allow traffic to Azure service tags:
 - `InternalACATraffic`
 **Key Configuration Note:** Create an IP Group containing the Container Apps internal IP ranges (100.64.0.0/10, 100.100.0.0/17, 100.100.128.0/19, 100.100.160.0/19, 100.100.192.0/19) to use as source addresses in firewall rules.
 
-![[Pasted image 20251206143806.png | 500]]
+![20251206143806](20251206143806.png)
 
-![[Pasted image 20251206143750.png | 500]]
+![20251206143750](20251206143750.png)
 ### Application Rules Configuration
 Application rules provide FQDN-based filtering for outbound HTTPS traffic to specific domains required by AI Foundry services.
 
-![[Pasted image 20251206163443.png]]
+![20251206163443](20251206163443.png)
 ### Resource Configuration 
 All AI Foundry project resources should be configured with network security in mind and with disabled public access. 
 
 AI Foundry resource network configuration below 
-![[Pasted image 20251206172829.png | 500]]
+![20251206172829](20251206172829.png)
 Delegated subnet configuration 
-![[Pasted image 20251206172848.png | 500]]
+![20251206172848](20251206172848.png)
 Cosmos DB Network configuration - Disabled Public Access
-![[Pasted image 20251206172920.png | 500]]
+![20251206172920](20251206172920.png)
 AI Search Network configuration - Disabled Public Access
-![[Pasted image 20251206172943.png | 500]]
+![20251206172943](20251206172943.png)
 Azure Storage Network configuration - Disabled Public Access 
-![[Pasted image 20251206173023.png | 500]]
+![20251206173023](20251206173023.png)
 
 ### Foundry Agent Validation
 After deployment, validate that the AI Foundry Agent service functions correctly:
 
-![[Pasted image 20251206163823.png | 500]]
+![20251206163823](20251206163823.png)
 ### 1. Create a New Agent
 Use the AI Foundry Portal to create and configure a new agent. Successful agent creation indicates proper network connectivity and resource access.
 
@@ -127,26 +127,26 @@ Test file upload functionality, which demonstrates:
 - Azure Storage connectivity via private endpoint
 - AI Search integration for vector database population
 - Authentication through Entra ID
-![[Pasted image 20251206165735.png|500]]
+![20251206165735](20251206165735.png)
 
 ### 3. Test Chat Playground
 Validate agent responses using the chat playground. This tests:
 - End-to-end agent functionality
 - Knowledge retrieval from vector store
 - OpenAI service connectivity
-![[Pasted image 20251206171457.png | 500]]
+![20251206172131](20251206172131.png)
 Thread logs functionality to trace requests
-![[Pasted image 20251206171540.png | 500]]
+![20251206171540](20251206171540.png)
 
 This is another example where we are asking a relevant question with the knowledge provided (Microsoft annual report 2025). We get expected response with reference to uploaded content. 
 
-![[Pasted image 20251206172131.png | 500]]
+![20251206172131](20251206172131.png)
 ### 4. Review Thread Logs
 Use the built-in thread logs functionality to:
 - Observe tool calls against the vector store
 - Validate response generation
 - Troubleshoot any issues with agent behavior
-![[Pasted image 20251206172202.png | 500]]
+![20251206172202](20251206172202.png)
 
 ### Observability 
 Comprehensive observability is essential for operating AI Foundry in production. Enable diagnostic logging across all components to gain visibility into traffic flows and request patterns.
@@ -154,19 +154,19 @@ Comprehensive observability is essential for operating AI Foundry in production.
 Having logs enabled on the firewall allows us to observe traffic flows from AI Foundry delegated subnet. Below is the behaviour. We can see communication from Foundry subnet, towards Microsoft Container Registry and towards Azure Container Apps endpoints. 
 
 Application Rule Logs below
-![[Pasted image 20251206144211.png | 500]]
+![20251206144211](20251206144211.png)
 
 Network Rule Logs below 
-![[Pasted image 20251206144048.png | 500]]
+![20251206144048](20251206144048.png)
 #### Observability -> VNET Flow Logs 
 Below are logs from the VNET hosting agents. We can observe ACA Traffic reaching Microsoft managed endpoinst 
-![[Pasted image 20251206175211.png | 500]]
+![20251206175211](20251206175211.png)
 #### Observability -> AI Foundry Logs 
 Foundry Logs also demonstrates requests from User towards Foundry Private Endpoints and other services reaching foundry service. 
-![[Pasted image 20251204061350.png | 500]]
+![20251204061350](20251204061350.png)
 #### Observability -> CosmosDB Logs 
 We are also able to see request logs from CosmosDB Logs showcasing request from Agent delegated Subnet. 
-![[Pasted image 20251204061529.png | 500]]
+![20251204061529](20251204061529.png)
 
 ## Conclusion
 Deploying Microsoft Foundry using the Bring Your Own VNET pattern provides enterprise grade security and network control for AI agent workloads. This blog post has demonstrated a comprehensive approach to securing Microsoft Foundry deployments through three critical layers: individual resource network configuration, subnet  NSG rules, and centralised Azure Firewall policies.
