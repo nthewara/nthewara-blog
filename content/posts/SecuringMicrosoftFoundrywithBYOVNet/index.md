@@ -1,7 +1,7 @@
 ---
 title: 'Securing Microsoft Foundry with Bring Your Own VNET'
 date: '2025-12-07'
-draft: true
+draft: false
 showComments: true
 ---
 
