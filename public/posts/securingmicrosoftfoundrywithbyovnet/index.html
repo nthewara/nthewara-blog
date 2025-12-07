@@ -14,15 +14,15 @@
   <meta name="theme-color">
 
   
-  <title>Azure Extended Zone Connectivity to Virtual WAN &middot; Cloud & AI Platforms Blog</title>
-    <meta name="title" content="Azure Extended Zone Connectivity to Virtual WAN &middot; Cloud & AI Platforms Blog">
+  <title>Securing Microsoft Foundry with Bring Your Own VNET &middot; Cloud & AI Platforms Blog</title>
+    <meta name="title" content="Securing Microsoft Foundry with Bring Your Own VNET &middot; Cloud & AI Platforms Blog">
 
   
   
   
   
   
-  <link rel="canonical" href="http://localhost:1313/posts/azureextendedzonevwan/">
+  <link rel="canonical" href="http://localhost:1313/posts/securingmicrosoftfoundrywithbyovnet/">
   
   
   
@@ -95,44 +95,44 @@
   
 
   
-  <meta property="og:url" content="http://localhost:1313/posts/azureextendedzonevwan/">
+  <meta property="og:url" content="http://localhost:1313/posts/securingmicrosoftfoundrywithbyovnet/">
   <meta property="og:site_name" content="Cloud & AI Platforms Blog">
-  <meta property="og:title" content="Azure Extended Zone Connectivity to Virtual WAN">
+  <meta property="og:title" content="Securing Microsoft Foundry with Bring Your Own VNET">
   <meta property="og:locale" content="en">
   <meta property="og:type" content="article">
     <meta property="article:section" content="posts">
-    <meta property="article:published_time" content="2025-08-31T00:00:00+00:00">
-    <meta property="article:modified_time" content="2025-08-31T00:00:00+00:00">
+    <meta property="article:published_time" content="2025-12-07T00:00:00+00:00">
+    <meta property="article:modified_time" content="2025-12-07T00:00:00+00:00">
 
   
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Azure Extended Zone Connectivity to Virtual WAN">
+  <meta name="twitter:title" content="Securing Microsoft Foundry with Bring Your Own VNET">
 
   <script type="application/ld+json">
   [{
     "@context": "https://schema.org",
     "@type": "Article",
     "articleSection": "Posts",
-    "name": "Azure Extended Zone Connectivity to Virtual WAN",
-    "headline": "Azure Extended Zone Connectivity to Virtual WAN",
+    "name": "Securing Microsoft Foundry with Bring Your Own VNET",
+    "headline": "Securing Microsoft Foundry with Bring Your Own VNET",
     
     
     "inLanguage": "en",
-    "url" : "http:\/\/localhost:1313\/posts\/azureextendedzonevwan\/",
+    "url" : "http:\/\/localhost:1313\/posts\/securingmicrosoftfoundrywithbyovnet\/",
     "author" : {
       "@type": "Person",
       "name": "Nirmal Thewarathanthri"
     },
     "copyrightYear": "2025",
-    "dateCreated": "2025-08-31T00:00:00\u002b00:00",
-    "datePublished": "2025-08-31T00:00:00\u002b00:00",
+    "dateCreated": "2025-12-07T00:00:00\u002b00:00",
+    "datePublished": "2025-12-07T00:00:00\u002b00:00",
     
-    "dateModified": "2025-08-31T00:00:00\u002b00:00",
+    "dateModified": "2025-12-07T00:00:00\u002b00:00",
     
     
     
     "mainEntityOfPage": "true",
-    "wordCount": "533"
+    "wordCount": "1136"
   }]
   </script>
 
@@ -411,7 +411,7 @@
     <header id="single_header" class="mt-5 max-w-prose">
       
       <h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
-        Azure Extended Zone Connectivity to Virtual WAN
+        Securing Microsoft Foundry with Bring Your Own VNET
       </h1>
       <div class="mt-1 mb-6 text-base text-neutral-500 dark:text-neutral-400 print:hidden">
         
@@ -464,10 +464,18 @@
   <div class="flex flex-row flex-wrap items-center">
     
     
-      <time datetime="2025-08-31T00:00:00&#43;00:00">2025-08-31</time><span class="px-2 text-primary-500">&middot;</span><span>533 words</span><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">3 mins</span>
+      <time datetime="2025-12-07T00:00:00&#43;00:00">2025-12-07</time><span class="px-2 text-primary-500">&middot;</span><span>1136 words</span><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">6 mins</span>
     
 
     
+    
+      <span class="pl-2"><span class="flex cursor-pointer">
+  <span
+    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    Draft
+  </span>
+</span>
+</span>
     
   </div>
 
@@ -498,31 +506,7 @@
         
 
         <div class="article-content max-w-prose mb-20">
-          <p>
-
-
-
-
-
-
-<figure>
-      <img
-    class="my-0 rounded-md"
-    loading="lazy"
-    decoding="async"
-    fetchpriority="low"
-    alt="alt"
-    srcset="
-      /posts/azureextendedzonevwan/20250831081337_hu_8730de46b317f316.png  330w,
-      /posts/azureextendedzonevwan/20250831081337_hu_f4432ee57518323c.png  660w,
-      /posts/azureextendedzonevwan/20250831081337_hu_431f21f16d3d3d00.png 1280w
-    "
-    data-zoom-src="/posts/azureextendedzonevwan/20250831081337.png"
-    src="/posts/azureextendedzonevwan/20250831081337.png">
-
-  
-</figure>
-</p>
+          <p>![[Pasted image 20251207080909.png | 500]]</p>
 
 <h2 class="relative group">Introduction 
     <div id="introduction" class="anchor"></div>
@@ -533,358 +517,366 @@
     </span>        
     
 </h2>
-<p>This blog post shares an engineering validated pattern for establishing connectivity between Azure Extended Zones and Azure Virtual WAN environments. Currently, Virtual WAN hubs cannot be deployed within Extended Zones, so we need alternative approaches to bridge these environments.</p>
-<p>Below is a summary of connectivity options for Extended Zone</p>
+<p>Microsoft Foundry (Previously called AI Foundry) provides powerful capabilities for building and deploying AI agents and solutions. For enterprise customers, securing these deployments within their own network infrastructure is critical for compliance, governance, and integration with existing landing zones. The Bring Your Own (BYO) VNET deployment pattern enables organizations to secure and control both inbound and outbound access to Foundry Agent services while maintaining network isolation.
+In this blog post, I&rsquo;m sharing lessons learned from a recent Microsoft Foundry Agent Service deployment utilizing the BYO VNET pattern. This approach is particularly valuable for organizations that need to:</p>
+<ul>
+<li>Integrate AI Foundry with existing hub-and-spoke network architectures</li>
+<li>Enforce strict network security policies</li>
+<li>Maintain compliance with regulatory requirements</li>
+<li>Control data flow and access patterns</li>
+</ul>
 
-<h2 class="relative group">Connectivity Options for Extended Zones 
-    <div id="connectivity-options-for-extended-zones" class="anchor"></div>
+<h3 class="relative group">Understanding AI Foundry Versions 
+    <div id="understanding-ai-foundry-versions" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100 select-none">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#connectivity-options-for-extended-zones" aria-label="Anchor">#</a>
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#understanding-ai-foundry-versions" aria-label="Anchor">#</a>
+    </span>        
+    
+</h3>
+<p>It&rsquo;s important to note that there are multiple versions of Azure AI Foundry in the documentation. This blog focuses on <strong>Azure AI Foundry Classic</strong> Service. For a detailed explanation of the differences between Hub based and Projectbased Foundry experiences, refer to <a
+  href="link">this blog</a>.</p>
+
+<h2 class="relative group">Security Architecture Overview 
+    <div id="security-architecture-overview" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100 select-none">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#security-architecture-overview" aria-label="Anchor">#</a>
     </span>        
     
 </h2>
-<table>
-  <thead>
-      <tr>
-          <th>Customer Scenario</th>
-          <th>Approach</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td>Customer with Traditional Hub &amp; Spoke VNet and looking to connect to Azure Region (eg Azure AU East)</td>
-          <td>Utilise Global VNet Peering for connecting from Extended Zone to Azure Region</td>
-      </tr>
-      <tr>
-          <td>Customer with Traditional Hub &amp; Spoke VNet and connect to on-premises (using Perth Edge)</td>
-          <td>Utilise ExpressRoute Connectivity or SD-WAN / VPN Connectivity using Network Virtual Appliance (NVA)</td>
-      </tr>
-      <tr>
-          <td>Customer with Virtual WAN and looking to connect to Azure Region from Extended Zone (eg Ex Zone Perth -&gt; Azure AU East)</td>
-          <td>Create Traditional VNet Hub &amp; Spoke pattern in Extended Zone and utilise ExpressRoute Circuit for connectivity to Virtual WAN hub in Azure Region</td>
-      </tr>
-  </tbody>
-</table>
+<p>When deploying AI Foundry using the BYO VNET approach, there are three critical security layers to configure:</p>
+<ol>
+<li><strong>Individual Resource Configuration</strong> - Network access settings for each Azure resource</li>
+<li><strong>Network Security Groups (NSGs)</strong> - Subnet level traffic filtering for the delegated AI Foundry subnet</li>
+<li><strong>Azure Firewall Configuration</strong> - Centralised outbound access control</li>
+</ol>
 
-<h2 class="relative group">Supported Networking Services for Extended Zones (Sept-2025) 
-    <div id="supported-networking-services-for-extended-zones-sept-2025" class="anchor"></div>
+<h2 class="relative group">Prerequisites 
+    <div id="prerequisites" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100 select-none">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#supported-networking-services-for-extended-zones-sept-2025" aria-label="Anchor">#</a>
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#prerequisites" aria-label="Anchor">#</a>
     </span>        
     
 </h2>
+<p>Before deploying AI Foundry with BYO VNET, ensure you have:</p>
 <ul>
-<li>Virtual Network</li>
-<li>Standard Public IP</li>
-<li>Standard Load Balancer</li>
-<li>ExpressRoute Circuits and ExpressRoute Gateways</li>
-<li>Virtual Network Peering (Local and Global)</li>
-<li>Private Link</li>
-<li>Virtual Network Appliances (NVAs)</li>
+<li>An existing VNET with available address space for dedicated subnets</li>
+<li>Azure Firewall or equivalent network virtual appliance</li>
+<li>Appropriate Azure RBAC permissions to create resources and configure networking</li>
+<li>Understanding of your organization&rsquo;s network architecture and security requirements</li>
 </ul>
 
-<h3 class="relative group">Services that are currently not available (Sept-2025) 
-    <div id="services-that-are-currently-not-available-sept-2025" class="anchor"></div>
+<h3 class="relative group">Deployment 
+    <div id="deployment" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100 select-none">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#services-that-are-currently-not-available-sept-2025" aria-label="Anchor">#</a>
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#deployment" aria-label="Anchor">#</a>
     </span>        
     
 </h3>
+<p>Foundry team has published templates for both <a
+  href="https://github.com/azure-ai-foundry/foundry-samples/tree/main/infrastructure/infrastructure-setup-bicep/15-private-network-standard-agent-setup"
+    target="_blank"
+  >Bicep</a> and <a
+  href="https://github.com/azure-ai-foundry/foundry-samples/tree/main/infrastructure/infrastructure-setup-terraform/15b-private-network-standard-agent-setup-byovnet"
+    target="_blank"
+  >Terraform</a> that can be used for creating Foundry deployment using customer owned VNET. This deployment template requires below resources for a successful deployment</p>
+<p><strong>1. Agent Subnet with Delegation</strong></p>
 <ul>
-<li>Virtual WAN</li>
-<li>VPN Gateway</li>
+<li>Recommended minimum size: /26 or larger depending on scale requirements</li>
+<li>Agent subnet delegated to Foundry with Subnet delegating using &ldquo;Microsoft.App/environments&rdquo; as below
+![[Pasted image 20251204054834.png | 500]]</li>
 </ul>
-<p>For this blog post, we&rsquo;ll cover 3rd scenario where a customer already has Virtual WAN environment and looking to establish connectivity to Extended Zones</p>
-
-<h2 class="relative group">Configuration 
-    <div id="configuration" class="anchor"></div>
-    
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100 select-none">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#configuration" aria-label="Anchor">#</a>
-    </span>        
-    
-</h2>
-<p>This setup follows the same configuration pattern used for establishing coexistence between Hub-Spoke environments and Virtual WAN. The key requirement is enabling bidirectional traffic flow between the two gateway types.</p>
-<p><strong>Essential Configuration Settings:</strong></p>
+<p><strong>2. Private Endpoints Subnet</strong></p>
 <ul>
-<li><strong>Hub-Spoke ExpressRoute Gateway</strong>: Enable &ldquo;Allow traffic from remote Virtual WAN networks&rdquo;</li>
-<li><strong>Virtual WAN ExpressRoute Gateway</strong>: Enable &ldquo;Allow traffic from non Virtual WAN networks&rdquo;</li>
+<li>Dedicated subnet for hosting private endpoints to AI Foundry resources</li>
+<li>No delegation required</li>
+<li>Recommended size: /27 or larger</li>
 </ul>
-<p>Below is my ExpressRoute Gateway deployed to Extended Zone VNet.
 
-
-
-
-
-
-
-<figure>
-      <img
-    class="my-0 rounded-md"
-    loading="lazy"
-    decoding="async"
-    fetchpriority="low"
-    alt="alt"
-    srcset="
-      /posts/azureextendedzonevwan/20250831082944_hu_e9c325bf8e839cfa.png  330w,
-      /posts/azureextendedzonevwan/20250831082944_hu_5a9eb07cbd214e7e.png  660w,
-      /posts/azureextendedzonevwan/20250831082944_hu_d1a61ca39829557c.png 1280w
-    "
-    data-zoom-src="/posts/azureextendedzonevwan/20250831082944.png"
-    src="/posts/azureextendedzonevwan/20250831082944.png">
-
-  
-</figure>
-
-Below configuration enables ExpressRoute Gateway to receive routes from Virtual WAN ExpressRoute Gateway
-
-
-
-
-
-
-
-<figure>
-      <img
-    class="my-0 rounded-md"
-    loading="lazy"
-    decoding="async"
-    fetchpriority="low"
-    alt="alt"
-    srcset="
-      /posts/azureextendedzonevwan/20250831083002_hu_a83f4c0e6fb7ee02.png  330w,
-      /posts/azureextendedzonevwan/20250831083002_hu_ef04c0efb5dd7cfb.png  660w,
-      /posts/azureextendedzonevwan/20250831083002_hu_376a6314e43066ba.png 1280w
-    "
-    data-zoom-src="/posts/azureextendedzonevwan/20250831083002.png"
-    src="/posts/azureextendedzonevwan/20250831083002.png">
-
-  
-</figure>
-</p>
-
-<h2 class="relative group">Validating Connectivity 
-    <div id="validating-connectivity" class="anchor"></div>
+<h3 class="relative group">Required Private DNS Zones 
+    <div id="required-private-dns-zones" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100 select-none">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#validating-connectivity" aria-label="Anchor">#</a>
-    </span>        
-    
-</h2>
-
-<h3 class="relative group">Step 1: Verify Extended Zone VM Routes 
-    <div id="step-1-verify-extended-zone-vm-routes" class="anchor"></div>
-    
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100 select-none">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#step-1-verify-extended-zone-vm-routes" aria-label="Anchor">#</a>
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#required-private-dns-zones" aria-label="Anchor">#</a>
     </span>        
     
 </h3>
-<p>First, validate that VMs in the Extended Zone are learning routes from the Virtual WAN environment through the ExpressRoute Gateway.</p>
-<p>
-
-
-
-
-
-
-<figure>
-      <img
-    class="my-0 rounded-md"
-    loading="lazy"
-    decoding="async"
-    fetchpriority="low"
-    alt="alt"
-    srcset="
-      /posts/azureextendedzonevwan/20250831092937_hu_87c18a8bde9f296.png  330w,
-      /posts/azureextendedzonevwan/20250831092937_hu_239c4bffe86a24da.png  660w,
-      /posts/azureextendedzonevwan/20250831092937_hu_420220882820e91e.png 1280w
-    "
-    data-zoom-src="/posts/azureextendedzonevwan/20250831092937.png"
-    src="/posts/azureextendedzonevwan/20250831092937.png">
-
-  
-</figure>
-</p>
-<p>Effective routes from my VM in Perth Extended Zone show routes learned from ExpressRoute Gateway and these are remote routes from my Virtual WAN environment.</p>
-<p>
-
-
-
-
-
-
-<figure>
-      <img
-    class="my-0 rounded-md"
-    loading="lazy"
-    decoding="async"
-    fetchpriority="low"
-    alt="alt"
-    srcset="
-      /posts/azureextendedzonevwan/20250831093034_hu_1842d6b9a797f322.png  330w,
-      /posts/azureextendedzonevwan/20250831093034_hu_e3e0b19af82dc489.png  660w,
-      /posts/azureextendedzonevwan/20250831093034_hu_78739d4ef58220c3.png 1280w
-    "
-    data-zoom-src="/posts/azureextendedzonevwan/20250831093034.png"
-    src="/posts/azureextendedzonevwan/20250831093034.png">
-
-  
-</figure>
-</p>
-
-<h3 class="relative group">Step 2: Validate Virtual WAN Environment Routes 
-    <div id="step-2-validate-virtual-wan-environment-routes" class="anchor"></div>
-    
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100 select-none">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#step-2-validate-virtual-wan-environment-routes" aria-label="Anchor">#</a>
-    </span>        
-    
-</h3>
-<p>Next, verify that VMs connected to the Virtual WAN hub are learning Extended Zone VNet prefixes.</p>
-<p>
-
-
-
-
-
-
-<figure>
-      <img
-    class="my-0 rounded-md"
-    loading="lazy"
-    decoding="async"
-    fetchpriority="low"
-    alt="alt"
-    srcset="
-      /posts/azureextendedzonevwan/20250831094511_hu_5839bfd15bda7a7c.png  330w,
-      /posts/azureextendedzonevwan/20250831094511_hu_7ecab8cbd2849362.png  660w,
-      /posts/azureextendedzonevwan/20250831094511_hu_a8f8575170541732.png 1280w
-    "
-    data-zoom-src="/posts/azureextendedzonevwan/20250831094511.png"
-    src="/posts/azureextendedzonevwan/20250831094511.png">
-
-  
-</figure>
-</p>
-<p>Below routes are learned by my virtual machine connected to Virtual WAN hub that is hosting ExpressRoute Gateway and we are able to see Extended Zone VNet prefixes are learned by the network interface attached to my VM.</p>
-<p>
-
-
-
-
-
-
-<figure>
-      <img
-    class="my-0 rounded-md"
-    loading="lazy"
-    decoding="async"
-    fetchpriority="low"
-    alt="alt"
-    srcset="
-      /posts/azureextendedzonevwan/20250831094601_hu_7159b19c78876a8e.png  330w,
-      /posts/azureextendedzonevwan/20250831094601_hu_4ef3225e384aaa8b.png  660w,
-      /posts/azureextendedzonevwan/20250831094601_hu_39a1f4add011c42d.png 1280w
-    "
-    data-zoom-src="/posts/azureextendedzonevwan/20250831094601.png"
-    src="/posts/azureextendedzonevwan/20250831094601.png">
-
-  
-</figure>
-</p>
-
-<h3 class="relative group">Step 3: Check Virtual WAN hub Effective Routes 
-    <div id="step-3-check-virtual-wan-hub-effective-routes" class="anchor"></div>
-    
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100 select-none">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#step-3-check-virtual-wan-hub-effective-routes" aria-label="Anchor">#</a>
-    </span>        
-    
-</h3>
-<p>For deeper insight into routing behavior, examine the effective routes from the Virtual WAN hub. This view helps understand:</p>
+<p>AI Foundry Agent Service must be able to resolve private endpoints. This can be achieved by either:</p>
 <ul>
-<li>AS Path information</li>
-<li>All prefixes learned by the ExpressRoute Gateway</li>
-<li>Route propagation between environments</li>
+<li>Directly linking Private DNS zones to your VNETs, or</li>
+<li>Using custom DNS configuration on the VNET pointing to Azure Private DNS Resolver or other DNS resolver service</li>
 </ul>
-<p>
+<p><strong>Required DNS zones:</strong></p>
+<ul>
+<li><code>privatelink.blob.core.windows.net</code></li>
+<li><code>privatelink.cognitiveservices.azure.com</code></li>
+<li><code>privatelink.documents.azure.com</code></li>
+<li><code>privatelink.openai.azure.com</code></li>
+<li><code>privatelink.search.windows.net</code></li>
+<li><code>privatelink.services.ai.azure.com</code></li>
+<li><code>privatelink.file.core.windows.net</code></li>
+</ul>
 
-
-
-
-
-
-<figure>
-      <img
-    class="my-0 rounded-md"
-    loading="lazy"
-    decoding="async"
-    fetchpriority="low"
-    alt="alt"
-    srcset="
-      /posts/azureextendedzonevwan/20250831094658_hu_4aee579327261bf9.png  330w,
-      /posts/azureextendedzonevwan/20250831094658_hu_c2b530da453fdce7.png  660w,
-      /posts/azureextendedzonevwan/20250831094658_hu_e1d2b60f58b2d316.png 1280w
-    "
-    data-zoom-src="/posts/azureextendedzonevwan/20250831094658.png"
-    src="/posts/azureextendedzonevwan/20250831094658.png">
-
-  
-</figure>
-</p>
-
-<h3 class="relative group">Additional Considerations 
-    <div id="additional-considerations" class="anchor"></div>
+<h3 class="relative group">Network Security Group Configuration 
+    <div id="network-security-group-configuration" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100 select-none">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#additional-considerations" aria-label="Anchor">#</a>
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#network-security-group-configuration" aria-label="Anchor">#</a>
     </span>        
     
 </h3>
+<p>NSG configuration is critical for controlling outbound access from the AI Foundry delegated agent subnet. The following outbound rules represent the minimum required configuration:</p>
 
-  
-  
-  
-  
-
-
-
-<div
-  
-    class="flex px-4 py-3 rounded-md" style="background-color: #0077be"
-  
-  >
-  <span
+<h3 class="relative group">NSG Rules 
+    <div id="nsg-rules" class="anchor"></div>
     
-      class="ltr:pr-3 rtl:pl-3 flex items-center" style="color: #ffffff"
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100 select-none">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#nsg-rules" aria-label="Anchor">#</a>
+    </span>        
     
-    >
-    <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path fill="currentColor" d="M112.1 454.3c0 6.297 1.816 12.44 5.284 17.69l17.14 25.69c5.25 7.875 17.17 14.28 26.64 14.28h61.67c9.438 0 21.36-6.401 26.61-14.28l17.08-25.68c2.938-4.438 5.348-12.37 5.348-17.7L272 415.1h-160L112.1 454.3zM191.4 .0132C89.44 .3257 16 82.97 16 175.1c0 44.38 16.44 84.84 43.56 115.8c16.53 18.84 42.34 58.23 52.22 91.45c.0313 .25 .0938 .5166 .125 .7823h160.2c.0313-.2656 .0938-.5166 .125-.7823c9.875-33.22 35.69-72.61 52.22-91.45C351.6 260.8 368 220.4 368 175.1C368 78.61 288.9-.2837 191.4 .0132zM192 96.01c-44.13 0-80 35.89-80 79.1C112 184.8 104.8 192 96 192S80 184.8 80 176c0-61.76 50.25-111.1 112-111.1c8.844 0 16 7.159 16 16S200.8 96.01 192 96.01z"/></svg>
-</span>
-  </span>
+</h3>
+<p><strong>1. Azure Active Directory (Required)</strong></p>
+<ul>
+<li>Service Tag: <code>AzureActiveDirectory</code></li>
+<li>Required for identity access</li>
+<li>Port: 443 (HTTPS)</li>
+</ul>
+<p><strong>2. Container Apps Management</strong></p>
+<ul>
+<li>Service Tag: <code>AzureContainerAppsManagement</code></li>
+<li>Required for Container Apps platform management</li>
+<li>Port: 443</li>
+</ul>
+<p><strong>3. Container Registry</strong></p>
+<ul>
+<li>Service Tag: <code>AzureContainerRegistry</code></li>
+<li>Required for pulling container images</li>
+<li>Port: 443</li>
+</ul>
+<p><strong>4. Container Apps Internal Communication</strong></p>
+<ul>
+<li>Destination: - 100.100.0.0/17, 100.100.128.0/19,100.100.160.0/19,100.100.192.0/19</li>
+<li>Container Apps uses this range for internal platform communication</li>
+<li>Ports: Any</li>
+</ul>
+<p>![[Pasted image 20251206134928.png]]</p>
 
-  <span
+<h3 class="relative group">Azure Firewall Configuration 
+    <div id="azure-firewall-configuration" class="anchor"></div>
     
-      style="color: #ffffff"
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100 select-none">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#azure-firewall-configuration" aria-label="Anchor">#</a>
+    </span>        
     
-    ><p><strong>Bandwidth Constraints</strong>: ExpressRoute Gateway bandwidth is limited by the gateway SKU configuration</p>
-<p><strong>Additional Latency</strong>: The gateway hop introduces additional latency to traffic flows between environments</p>
-</span>
-</div>
+</h3>
+<p>Azure Firewall provides centralized control over outbound traffic from the AI Foundry environment. The firewall processes rules in the following order:</p>
+<ol>
+<li><strong>Network Rules</strong> - Processed first</li>
+<li><strong>Application Rules</strong> - Processed if no network rule match</li>
+</ol>
 
+<h3 class="relative group">Network Rules Configuration 
+    <div id="network-rules-configuration" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100 select-none">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#network-rules-configuration" aria-label="Anchor">#</a>
+    </span>        
+    
+</h3>
+<p>Configure network rules to allow traffic to Azure service tags:</p>
+<ul>
+<li><code>AzureActiveDirectory</code> - Port 443</li>
+<li><code>InternalACATraffic</code>
+<strong>Key Configuration Note:</strong> Create an IP Group containing the Container Apps internal IP ranges (100.64.0.0/10, 100.100.0.0/17, 100.100.128.0/19, 100.100.160.0/19, 100.100.192.0/19) to use as source addresses in firewall rules.</li>
+</ul>
+<p>![[Pasted image 20251206143806.png | 500]]</p>
+<p>![[Pasted image 20251206143750.png | 500]]</p>
+
+<h3 class="relative group">Application Rules Configuration 
+    <div id="application-rules-configuration" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100 select-none">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#application-rules-configuration" aria-label="Anchor">#</a>
+    </span>        
+    
+</h3>
+<p>Application rules provide FQDN-based filtering for outbound HTTPS traffic to specific domains required by AI Foundry services.</p>
+<p>![[Pasted image 20251206163443.png]]</p>
+
+<h3 class="relative group">Resource Configuration 
+    <div id="resource-configuration" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100 select-none">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#resource-configuration" aria-label="Anchor">#</a>
+    </span>        
+    
+</h3>
+<p>All AI Foundry project resources should be configured with network security in mind and with disabled public access.</p>
+<p>AI Foundry resource network configuration below
+![[Pasted image 20251206172829.png | 500]]
+Delegated subnet configuration
+![[Pasted image 20251206172848.png | 500]]
+Cosmos DB Network configuration - Disabled Public Access
+![[Pasted image 20251206172920.png | 500]]
+AI Search Network configuration - Disabled Public Access
+![[Pasted image 20251206172943.png | 500]]
+Azure Storage Network configuration - Disabled Public Access
+![[Pasted image 20251206173023.png | 500]]</p>
+
+<h3 class="relative group">Foundry Agent Validation 
+    <div id="foundry-agent-validation" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100 select-none">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#foundry-agent-validation" aria-label="Anchor">#</a>
+    </span>        
+    
+</h3>
+<p>After deployment, validate that the AI Foundry Agent service functions correctly:</p>
+<p>![[Pasted image 20251206163823.png | 500]]</p>
+
+<h3 class="relative group">1. Create a New Agent 
+    <div id="1-create-a-new-agent" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100 select-none">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#1-create-a-new-agent" aria-label="Anchor">#</a>
+    </span>        
+    
+</h3>
+<p>Use the AI Foundry Portal to create and configure a new agent. Successful agent creation indicates proper network connectivity and resource access.</p>
+<p>![[Pasted image 20251206165637.png | 500]]</p>
+
+<h3 class="relative group">2. Upload Knowledge Files 
+    <div id="2-upload-knowledge-files" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100 select-none">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#2-upload-knowledge-files" aria-label="Anchor">#</a>
+    </span>        
+    
+</h3>
+<p>Test file upload functionality, which demonstrates:</p>
+<ul>
+<li>Azure Storage connectivity via private endpoint</li>
+<li>AI Search integration for vector database population</li>
+<li>Authentication through Entra ID
+![[Pasted image 20251206165735.png|500]]</li>
+</ul>
+
+<h3 class="relative group">3. Test Chat Playground 
+    <div id="3-test-chat-playground" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100 select-none">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#3-test-chat-playground" aria-label="Anchor">#</a>
+    </span>        
+    
+</h3>
+<p>Validate agent responses using the chat playground. This tests:</p>
+<ul>
+<li>End-to-end agent functionality</li>
+<li>Knowledge retrieval from vector store</li>
+<li>OpenAI service connectivity
+![[Pasted image 20251206171457.png | 500]]
+Thread logs functionality to trace requests
+![[Pasted image 20251206171540.png | 500]]</li>
+</ul>
+<p>This is another example where we are asking a relevant question with the knowledge provided (Microsoft annual report 2025). We get expected response with reference to uploaded content.</p>
+<p>![[Pasted image 20251206172131.png | 500]]</p>
+
+<h3 class="relative group">4. Review Thread Logs 
+    <div id="4-review-thread-logs" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100 select-none">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#4-review-thread-logs" aria-label="Anchor">#</a>
+    </span>        
+    
+</h3>
+<p>Use the built-in thread logs functionality to:</p>
+<ul>
+<li>Observe tool calls against the vector store</li>
+<li>Validate response generation</li>
+<li>Troubleshoot any issues with agent behavior
+![[Pasted image 20251206172202.png | 500]]</li>
+</ul>
+
+<h3 class="relative group">Observability 
+    <div id="observability" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100 select-none">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#observability" aria-label="Anchor">#</a>
+    </span>        
+    
+</h3>
+<p>Comprehensive observability is essential for operating AI Foundry in production. Enable diagnostic logging across all components to gain visibility into traffic flows and request patterns.</p>
+
+<h4 class="relative group">Observability - &gt; Firewall 
+    <div id="observability----firewall" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100 select-none">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#observability----firewall" aria-label="Anchor">#</a>
+    </span>        
+    
+</h4>
+<p>Having logs enabled on the firewall allows us to observe traffic flows from AI Foundry delegated subnet. Below is the behaviour. We can see communication from Foundry subnet, towards Microsoft Container Registry and towards Azure Container Apps endpoints.</p>
+<p>Application Rule Logs below
+![[Pasted image 20251206144211.png | 500]]</p>
+<p>Network Rule Logs below
+![[Pasted image 20251206144048.png | 500]]</p>
+
+<h4 class="relative group">Observability -&gt; VNET Flow Logs 
+    <div id="observability---vnet-flow-logs" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100 select-none">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#observability---vnet-flow-logs" aria-label="Anchor">#</a>
+    </span>        
+    
+</h4>
+<p>Below are logs from the VNET hosting agents. We can observe ACA Traffic reaching Microsoft managed endpoinst
+![[Pasted image 20251206175211.png | 500]]</p>
+
+<h4 class="relative group">Observability -&gt; AI Foundry Logs 
+    <div id="observability---ai-foundry-logs" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100 select-none">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#observability---ai-foundry-logs" aria-label="Anchor">#</a>
+    </span>        
+    
+</h4>
+<p>Foundry Logs also demonstrates requests from User towards Foundry Private Endpoints and other services reaching foundry service.
+![[Pasted image 20251204061350.png | 500]]</p>
+
+<h4 class="relative group">Observability -&gt; CosmosDB Logs 
+    <div id="observability---cosmosdb-logs" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100 select-none">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#observability---cosmosdb-logs" aria-label="Anchor">#</a>
+    </span>        
+    
+</h4>
+<p>We are also able to see request logs from CosmosDB Logs showcasing request from Agent delegated Subnet.
+![[Pasted image 20251204061529.png | 500]]</p>
 
 <h2 class="relative group">Conclusion 
     <div id="conclusion" class="anchor"></div>
@@ -895,7 +887,7 @@ Below configuration enables ExpressRoute Gateway to receive routes from Virtual 
     </span>        
     
 </h2>
-<p>If you are already using Virtual WAN network deployment, you can now take full advantage of Extended Zones by connecting to your existing Virtual WAN environment using your current ExpressRoute connectivity.</p>
+<p>Deploying Microsoft Foundry using the Bring Your Own VNET pattern provides enterprise grade security and network control for AI agent workloads. This blog post has demonstrated a comprehensive approach to securing Microsoft Foundry deployments through three critical layers: individual resource network configuration, subnet  NSG rules, and centralised Azure Firewall policies.</p>
 
           
           
@@ -1030,8 +1022,8 @@ Below configuration enables ExpressRoute Gateway to receive routes from Virtual 
           type="text/javascript"
           src="/js/page.min.54b6f4371722649edbe871e431d8670d670878c22be8f36e229fe53cc9b786fe25a834def5e6de621f7a3e37b72bc8cd73839aa5ed907ed6cbd45cd3e1b0fa20.js"
           integrity="sha512-VLb0NxciZJ7b6HHkMdhnDWcIeMIr6PNuIp/lPMm3hv4lqDTe9ebeYh96Pje3K8jNc4Oape2QftbL1FzT4bD6IA=="
-          data-oid="views_posts/AzureExtendedZonevWAN/index.md"
-          data-oid-likes="likes_posts/AzureExtendedZonevWAN/index.md"></script>
+          data-oid="views_posts/SecuringMicrosoftFoundrywithBYOVNet/index.md"
+          data-oid-likes="likes_posts/SecuringMicrosoftFoundrywithBYOVNet/index.md"></script>
       
     </section>
 
@@ -1047,7 +1039,7 @@ Below configuration enables ExpressRoute Gateway to receive routes from Virtual 
       <div class="flex justify-between pt-3">
         <span>
           
-            <a class="flex group mr-3" href="/posts/virtual-wanexpressrouteroutemaps/">
+            <a class="flex group mr-3" href="/posts/azureextendedzonevwan/">
               <span
                 class="mr-3 text-neutral-700 group-hover:text-primary-600 ltr:inline rtl:hidden dark:text-neutral dark:group-hover:text-primary-400"
                 >&larr;</span
@@ -1058,11 +1050,11 @@ Below configuration enables ExpressRoute Gateway to receive routes from Virtual 
               >
               <span class="flex flex-col">
                 <span class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
-                  >Virtual WAN ExpressRoute together with RouteMaps</span
+                  >Azure Extended Zone Connectivity to Virtual WAN</span
                 >
                 <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
                   
-                    <time datetime="2025-07-29T00:00:00&#43;00:00">2025-07-29</time>
+                    <time datetime="2025-08-31T00:00:00&#43;00:00">2025-08-31</time>
                   
                 </span>
               </span>
@@ -1070,27 +1062,6 @@ Below configuration enables ExpressRoute Gateway to receive routes from Virtual 
           
         </span>
         <span>
-          
-            <a class="flex text-right group ml-3" href="/posts/securingmicrosoftfoundrywithbyovnet/">
-              <span class="flex flex-col">
-                <span class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
-                  >Securing Microsoft Foundry with Bring Your Own VNET</span
-                >
-                <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
-                  
-                    <time datetime="2025-12-07T00:00:00&#43;00:00">2025-12-07</time>
-                  
-                </span>
-              </span>
-              <span
-                class="ml-3 text-neutral-700 group-hover:text-primary-600 ltr:inline rtl:hidden dark:text-neutral dark:group-hover:text-primary-400"
-                >&rarr;</span
-              >
-              <span
-                class="mr-3 text-neutral-700 group-hover:text-primary-600 ltr:hidden rtl:inline dark:text-neutral dark:group-hover:text-primary-400"
-                >&larr;</span
-              >
-            </a>
           
         </span>
       </div>
