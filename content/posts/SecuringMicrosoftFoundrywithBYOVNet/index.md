@@ -93,7 +93,10 @@ Azure Firewall provides centralised control over outbound traffic from the Micro
 Configure network rules to allow traffic to Azure service tags:
 - `AzureActiveDirectory` - Port 443
 - `InternalACATraffic`
-**Key Configuration Note:** Create an IP Group containing the Container Apps internal IP ranges (100.64.0.0/10, 100.100.0.0/17, 100.100.128.0/19, 100.100.160.0/19, 100.100.192.0/19) to use as source addresses in firewall rules.
+
+{{< alert icon="lightbulb" cardColor="#0077be" iconColor="#ffffff" textColor="#ffffff" >}}
+**Key Configuration Note:** Create an IP Group containing [Container Apps internal IP ranges](https://learn.microsoft.com/en-us/azure/container-apps/custom-virtual-networks?tabs=workload-profiles-env#subnet-address-range-restrictions) (100.64.0.0/10, 100.100.0.0/17, 100.100.128.0/19, 100.100.160.0/19, 100.100.192.0/19) to use as source addresses in firewall rules.
+{{< /alert >}}
 
 ![20251206143806](20251206143806.png)
 

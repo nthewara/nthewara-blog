@@ -14,15 +14,15 @@
   <meta name="theme-color">
 
   
-  <title>Azure Extended Zone Connectivity to Virtual WAN &middot; Cloud & AI Platforms Blog</title>
-    <meta name="title" content="Azure Extended Zone Connectivity to Virtual WAN &middot; Cloud & AI Platforms Blog">
+  <title>Virtual WAN ExpressRoute together with RouteMaps &middot; Cloud & AI Platforms Blog</title>
+    <meta name="title" content="Virtual WAN ExpressRoute together with RouteMaps &middot; Cloud & AI Platforms Blog">
 
   
   
   
   
   
-  <link rel="canonical" href="http://localhost:1313/posts/azureextendedzonevwan/">
+  <link rel="canonical" href="http://localhost:1313/posts/virtualwanexpressrouteroutemaps/">
   
   
   
@@ -95,44 +95,44 @@
   
 
   
-  <meta property="og:url" content="http://localhost:1313/posts/azureextendedzonevwan/">
+  <meta property="og:url" content="http://localhost:1313/posts/virtualwanexpressrouteroutemaps/">
   <meta property="og:site_name" content="Cloud & AI Platforms Blog">
-  <meta property="og:title" content="Azure Extended Zone Connectivity to Virtual WAN">
+  <meta property="og:title" content="Virtual WAN ExpressRoute together with RouteMaps">
   <meta property="og:locale" content="en">
   <meta property="og:type" content="article">
     <meta property="article:section" content="posts">
-    <meta property="article:published_time" content="2025-08-31T00:00:00+00:00">
-    <meta property="article:modified_time" content="2025-08-31T00:00:00+00:00">
+    <meta property="article:published_time" content="2025-07-29T00:00:00+00:00">
+    <meta property="article:modified_time" content="2025-07-29T00:00:00+00:00">
 
   
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Azure Extended Zone Connectivity to Virtual WAN">
+  <meta name="twitter:title" content="Virtual WAN ExpressRoute together with RouteMaps">
 
   <script type="application/ld+json">
   [{
     "@context": "https://schema.org",
     "@type": "Article",
     "articleSection": "Posts",
-    "name": "Azure Extended Zone Connectivity to Virtual WAN",
-    "headline": "Azure Extended Zone Connectivity to Virtual WAN",
+    "name": "Virtual WAN ExpressRoute together with RouteMaps",
+    "headline": "Virtual WAN ExpressRoute together with RouteMaps",
     
     
     "inLanguage": "en",
-    "url" : "http:\/\/localhost:1313\/posts\/azureextendedzonevwan\/",
+    "url" : "http:\/\/localhost:1313\/posts\/virtualwanexpressrouteroutemaps\/",
     "author" : {
       "@type": "Person",
       "name": "Nirmal Thewarathanthri"
     },
     "copyrightYear": "2025",
-    "dateCreated": "2025-08-31T00:00:00\u002b00:00",
-    "datePublished": "2025-08-31T00:00:00\u002b00:00",
+    "dateCreated": "2025-07-29T00:00:00\u002b00:00",
+    "datePublished": "2025-07-29T00:00:00\u002b00:00",
     
-    "dateModified": "2025-08-31T00:00:00\u002b00:00",
+    "dateModified": "2025-07-29T00:00:00\u002b00:00",
     
     
     
     "mainEntityOfPage": "true",
-    "wordCount": "533"
+    "wordCount": "445"
   }]
   </script>
 
@@ -411,7 +411,7 @@
     <header id="single_header" class="mt-5 max-w-prose">
       
       <h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
-        Azure Extended Zone Connectivity to Virtual WAN
+        Virtual WAN ExpressRoute together with RouteMaps
       </h1>
       <div class="mt-1 mb-6 text-base text-neutral-500 dark:text-neutral-400 print:hidden">
         
@@ -464,10 +464,18 @@
   <div class="flex flex-row flex-wrap items-center">
     
     
-      <time datetime="2025-08-31T00:00:00&#43;00:00">2025-08-31</time><span class="px-2 text-primary-500">&middot;</span><span>533 words</span><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">3 mins</span>
+      <time datetime="2025-07-29T00:00:00&#43;00:00">2025-07-29</time><span class="px-2 text-primary-500">&middot;</span><span>445 words</span><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">3 mins</span>
     
 
     
+    
+      <span class="pl-2"><span class="flex cursor-pointer">
+  <span
+    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    Draft
+  </span>
+</span>
+</span>
     
   </div>
 
@@ -513,12 +521,12 @@
     fetchpriority="low"
     alt="alt"
     srcset="
-      /posts/azureextendedzonevwan/20250831081337_hu_8730de46b317f316.png  330w,
-      /posts/azureextendedzonevwan/20250831081337_hu_f4432ee57518323c.png  660w,
-      /posts/azureextendedzonevwan/20250831081337_hu_431f21f16d3d3d00.png 1280w
+      /posts/virtualwanexpressrouteroutemaps/20250831081337_hu_8730de46b317f316.png  330w,
+      /posts/virtualwanexpressrouteroutemaps/20250831081337_hu_f4432ee57518323c.png  660w,
+      /posts/virtualwanexpressrouteroutemaps/20250831081337_hu_431f21f16d3d3d00.png 1280w
     "
-    data-zoom-src="/posts/azureextendedzonevwan/20250831081337.png"
-    src="/posts/azureextendedzonevwan/20250831081337.png">
+    data-zoom-src="/posts/virtualwanexpressrouteroutemaps/20250831081337.png"
+    src="/posts/virtualwanexpressrouteroutemaps/20250831081337.png">
 
   
 </figure>
@@ -534,73 +542,44 @@
     
 </h2>
 <p>This blog post shares an engineering validated pattern for establishing connectivity between Azure Extended Zones and Azure Virtual WAN environments. Currently, Virtual WAN hubs cannot be deployed within Extended Zones, so we need alternative approaches to bridge these environments.</p>
-<p>Below is a summary of connectivity options for Extended Zone</p>
+<p>Below is a summary of connectivity options between Extended Zones and Azure regions:</p>
 
-<h2 class="relative group">Connectivity Options for Extended Zones 
-    <div id="connectivity-options-for-extended-zones" class="anchor"></div>
+<h2 class="relative group">Connectivity Options for Extended Zone to Azure Region 
+    <div id="connectivity-options-for-extended-zone-to-azure-region" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100 select-none">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#connectivity-options-for-extended-zones" aria-label="Anchor">#</a>
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#connectivity-options-for-extended-zone-to-azure-region" aria-label="Anchor">#</a>
     </span>        
     
 </h2>
 <table>
   <thead>
       <tr>
-          <th>Customer Scenario</th>
-          <th>Approach</th>
+          <th>Connectivity Method</th>
+          <th>Hub-Spoke Environment</th>
+          <th>Virtual WAN Environment</th>
       </tr>
   </thead>
   <tbody>
       <tr>
-          <td>Customer with Traditional Hub &amp; Spoke VNet and looking to connect to Azure Region (eg Azure AU East)</td>
-          <td>Utilise Global VNet Peering for connecting from Extended Zone to Azure Region</td>
+          <td><strong>Global VNET Peering</strong></td>
+          <td><strong>Recommended option</strong> for connecting Hub-Spoke network hubs</td>
+          <td>Not supported when hosting a gateway in Extended Zone VNET</td>
       </tr>
       <tr>
-          <td>Customer with Traditional Hub &amp; Spoke VNet and connect to on-premises (using Perth Edge)</td>
-          <td>Utilise ExpressRoute Connectivity or SD-WAN / VPN Connectivity using Network Virtual Appliance (NVA)</td>
+          <td><strong>SD-WAN Network Virtual Appliance</strong></td>
+          <td>Establish connectivity using SD-WAN tunnels</td>
+          <td>Establish connectivity using SD-WAN tunnels</td>
       </tr>
       <tr>
-          <td>Customer with Virtual WAN and looking to connect to Azure Region from Extended Zone (eg Ex Zone Perth -&gt; Azure AU East)</td>
-          <td>Create Traditional VNet Hub &amp; Spoke pattern in Extended Zone and utilise ExpressRoute Circuit for connectivity to Virtual WAN hub in Azure Region</td>
+          <td><strong>ExpressRoute</strong></td>
+          <td>Not recommended due to added latency and bandwidth constraints</td>
+          <td><strong>Recommended option</strong> given current lack of Virtual WAN hub support in Extended Zones</td>
       </tr>
   </tbody>
 </table>
-
-<h2 class="relative group">Supported Networking Services for Extended Zones (Sept-2025) 
-    <div id="supported-networking-services-for-extended-zones-sept-2025" class="anchor"></div>
-    
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100 select-none">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#supported-networking-services-for-extended-zones-sept-2025" aria-label="Anchor">#</a>
-    </span>        
-    
-</h2>
-<ul>
-<li>Virtual Network</li>
-<li>Standard Public IP</li>
-<li>Standard Load Balancer</li>
-<li>ExpressRoute Circuits and ExpressRoute Gateways</li>
-<li>Virtual Network Peering (Local and Global)</li>
-<li>Private Link</li>
-<li>Virtual Network Appliances (NVAs)</li>
-</ul>
-
-<h3 class="relative group">Services that are currently not available (Sept-2025) 
-    <div id="services-that-are-currently-not-available-sept-2025" class="anchor"></div>
-    
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100 select-none">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#services-that-are-currently-not-available-sept-2025" aria-label="Anchor">#</a>
-    </span>        
-    
-</h3>
-<ul>
-<li>Virtual WAN</li>
-<li>VPN Gateway</li>
-</ul>
-<p>For this blog post, we&rsquo;ll cover 3rd scenario where a customer already has Virtual WAN environment and looking to establish connectivity to Extended Zones</p>
+<p>For this implementation, we&rsquo;ll use ExpressRoute to connect the Extended Zone environment to other Azure regions.</p>
 
 <h2 class="relative group">Configuration 
     <div id="configuration" class="anchor"></div>
@@ -617,7 +596,7 @@
 <li><strong>Hub-Spoke ExpressRoute Gateway</strong>: Enable &ldquo;Allow traffic from remote Virtual WAN networks&rdquo;</li>
 <li><strong>Virtual WAN ExpressRoute Gateway</strong>: Enable &ldquo;Allow traffic from non Virtual WAN networks&rdquo;</li>
 </ul>
-<p>Below is my ExpressRoute Gateway deployed to Extended Zone VNet.
+<p>Below is my ExpressRoute Gateway deployed to Extended Zone VNET.
 
 
 
@@ -626,24 +605,12 @@
 
 
 <figure>
-      <img
-    class="my-0 rounded-md"
-    loading="lazy"
-    decoding="async"
-    fetchpriority="low"
-    alt="alt"
-    srcset="
-      /posts/azureextendedzonevwan/20250831082944_hu_e9c325bf8e839cfa.png  330w,
-      /posts/azureextendedzonevwan/20250831082944_hu_5a9eb07cbd214e7e.png  660w,
-      /posts/azureextendedzonevwan/20250831082944_hu_d1a61ca39829557c.png 1280w
-    "
-    data-zoom-src="/posts/azureextendedzonevwan/20250831082944.png"
-    src="/posts/azureextendedzonevwan/20250831082944.png">
+    <img class="my-0 rounded-md" loading="lazy" alt="alt" src="20250831082944.png">
 
   
 </figure>
 
-Below configuration enables ExpressRoute Gateway to receive routes from Virtual WAN ExpressRoute Gateway
+Below configuration enables ExpressRoute Gateway to recieve routes from Virtual WAN ExpressRoute Gateway
 
 
 
@@ -652,19 +619,7 @@ Below configuration enables ExpressRoute Gateway to receive routes from Virtual 
 
 
 <figure>
-      <img
-    class="my-0 rounded-md"
-    loading="lazy"
-    decoding="async"
-    fetchpriority="low"
-    alt="alt"
-    srcset="
-      /posts/azureextendedzonevwan/20250831083002_hu_a83f4c0e6fb7ee02.png  330w,
-      /posts/azureextendedzonevwan/20250831083002_hu_ef04c0efb5dd7cfb.png  660w,
-      /posts/azureextendedzonevwan/20250831083002_hu_376a6314e43066ba.png 1280w
-    "
-    data-zoom-src="/posts/azureextendedzonevwan/20250831083002.png"
-    src="/posts/azureextendedzonevwan/20250831083002.png">
+    <img class="my-0 rounded-md" loading="lazy" alt="alt" src="20250831083002.png">
 
   
 </figure>
@@ -698,24 +653,12 @@ Below configuration enables ExpressRoute Gateway to receive routes from Virtual 
 
 
 <figure>
-      <img
-    class="my-0 rounded-md"
-    loading="lazy"
-    decoding="async"
-    fetchpriority="low"
-    alt="alt"
-    srcset="
-      /posts/azureextendedzonevwan/20250831092937_hu_87c18a8bde9f296.png  330w,
-      /posts/azureextendedzonevwan/20250831092937_hu_239c4bffe86a24da.png  660w,
-      /posts/azureextendedzonevwan/20250831092937_hu_420220882820e91e.png 1280w
-    "
-    data-zoom-src="/posts/azureextendedzonevwan/20250831092937.png"
-    src="/posts/azureextendedzonevwan/20250831092937.png">
+    <img class="my-0 rounded-md" loading="lazy" alt="alt" src="20250831092937.png">
 
   
 </figure>
 </p>
-<p>Effective routes from my VM in Perth Extended Zone show routes learned from ExpressRoute Gateway and these are remote routes from my Virtual WAN environment.</p>
+<p>Effective routes from my VM in Perth Extended Zone shows routes learned from ExpressRoute Gateway and these are remote routes from my Virtual WAN environment.</p>
 <p>
 
 
@@ -724,19 +667,7 @@ Below configuration enables ExpressRoute Gateway to receive routes from Virtual 
 
 
 <figure>
-      <img
-    class="my-0 rounded-md"
-    loading="lazy"
-    decoding="async"
-    fetchpriority="low"
-    alt="alt"
-    srcset="
-      /posts/azureextendedzonevwan/20250831093034_hu_1842d6b9a797f322.png  330w,
-      /posts/azureextendedzonevwan/20250831093034_hu_e3e0b19af82dc489.png  660w,
-      /posts/azureextendedzonevwan/20250831093034_hu_78739d4ef58220c3.png 1280w
-    "
-    data-zoom-src="/posts/azureextendedzonevwan/20250831093034.png"
-    src="/posts/azureextendedzonevwan/20250831093034.png">
+    <img class="my-0 rounded-md" loading="lazy" alt="alt" src="20250831093034.png">
 
   
 </figure>
@@ -751,7 +682,7 @@ Below configuration enables ExpressRoute Gateway to receive routes from Virtual 
     </span>        
     
 </h3>
-<p>Next, verify that VMs connected to the Virtual WAN hub are learning Extended Zone VNet prefixes.</p>
+<p>Next, verify that VMs connected to the Virtual WAN hub are learning Extended Zone VNET prefixes.</p>
 <p>
 
 
@@ -760,24 +691,12 @@ Below configuration enables ExpressRoute Gateway to receive routes from Virtual 
 
 
 <figure>
-      <img
-    class="my-0 rounded-md"
-    loading="lazy"
-    decoding="async"
-    fetchpriority="low"
-    alt="alt"
-    srcset="
-      /posts/azureextendedzonevwan/20250831094511_hu_5839bfd15bda7a7c.png  330w,
-      /posts/azureextendedzonevwan/20250831094511_hu_7ecab8cbd2849362.png  660w,
-      /posts/azureextendedzonevwan/20250831094511_hu_a8f8575170541732.png 1280w
-    "
-    data-zoom-src="/posts/azureextendedzonevwan/20250831094511.png"
-    src="/posts/azureextendedzonevwan/20250831094511.png">
+    <img class="my-0 rounded-md" loading="lazy" alt="alt" src="20250831094511.png">
 
   
 </figure>
 </p>
-<p>Below routes are learned by my virtual machine connected to Virtual WAN hub that is hosting ExpressRoute Gateway and we are able to see Extended Zone VNet prefixes are learned by the network interface attached to my VM.</p>
+<p>Below routes are learned by my virtual machine connected to Virtual WAN hub that is hosting ExpressRoute Gateway and we are able to see Extended Zone VNET prefixes are learned by the network interface attached to my VM.</p>
 <p>
 
 
@@ -786,25 +705,13 @@ Below configuration enables ExpressRoute Gateway to receive routes from Virtual 
 
 
 <figure>
-      <img
-    class="my-0 rounded-md"
-    loading="lazy"
-    decoding="async"
-    fetchpriority="low"
-    alt="alt"
-    srcset="
-      /posts/azureextendedzonevwan/20250831094601_hu_7159b19c78876a8e.png  330w,
-      /posts/azureextendedzonevwan/20250831094601_hu_4ef3225e384aaa8b.png  660w,
-      /posts/azureextendedzonevwan/20250831094601_hu_39a1f4add011c42d.png 1280w
-    "
-    data-zoom-src="/posts/azureextendedzonevwan/20250831094601.png"
-    src="/posts/azureextendedzonevwan/20250831094601.png">
+    <img class="my-0 rounded-md" loading="lazy" alt="alt" src="20250831094601.png">
 
   
 </figure>
 </p>
 
-<h3 class="relative group">Step 3: Check Virtual WAN hub Effective Routes 
+<h3 class="relative group">Step 3: Check Virtual WAN Hub Effective Routes 
     <div id="step-3-check-virtual-wan-hub-effective-routes" class="anchor"></div>
     
     <span
@@ -813,7 +720,7 @@ Below configuration enables ExpressRoute Gateway to receive routes from Virtual 
     </span>        
     
 </h3>
-<p>For deeper insight into routing behavior, examine the effective routes from the Virtual WAN hub. This view helps understand:</p>
+<p>For deeper insight into routing behavior, examine the effective routes from the Virtual WAN Hub. This view helps understand:</p>
 <ul>
 <li>AS Path information</li>
 <li>All prefixes learned by the ExpressRoute Gateway</li>
@@ -827,19 +734,7 @@ Below configuration enables ExpressRoute Gateway to receive routes from Virtual 
 
 
 <figure>
-      <img
-    class="my-0 rounded-md"
-    loading="lazy"
-    decoding="async"
-    fetchpriority="low"
-    alt="alt"
-    srcset="
-      /posts/azureextendedzonevwan/20250831094658_hu_4aee579327261bf9.png  330w,
-      /posts/azureextendedzonevwan/20250831094658_hu_c2b530da453fdce7.png  660w,
-      /posts/azureextendedzonevwan/20250831094658_hu_e1d2b60f58b2d316.png 1280w
-    "
-    data-zoom-src="/posts/azureextendedzonevwan/20250831094658.png"
-    src="/posts/azureextendedzonevwan/20250831094658.png">
+    <img class="my-0 rounded-md" loading="lazy" alt="alt" src="20250831094658.png">
 
   
 </figure>
@@ -881,7 +776,7 @@ Below configuration enables ExpressRoute Gateway to receive routes from Virtual 
       style="color: #ffffff"
     
     ><p><strong>Bandwidth Constraints</strong>: ExpressRoute Gateway bandwidth is limited by the gateway SKU configuration</p>
-<p><strong>Additional Latency</strong>: The gateway hop introduces additional latency to traffic flows between environments</p>
+<p><strong>Additional Latency</strong>: The gateway hop introduces extra latency to traffic flows between environments</p>
 </span>
 </div>
 
@@ -1030,8 +925,8 @@ Below configuration enables ExpressRoute Gateway to receive routes from Virtual 
           type="text/javascript"
           src="/js/page.min.54b6f4371722649edbe871e431d8670d670878c22be8f36e229fe53cc9b786fe25a834def5e6de621f7a3e37b72bc8cd73839aa5ed907ed6cbd45cd3e1b0fa20.js"
           integrity="sha512-VLb0NxciZJ7b6HHkMdhnDWcIeMIr6PNuIp/lPMm3hv4lqDTe9ebeYh96Pje3K8jNc4Oape2QftbL1FzT4bD6IA=="
-          data-oid="views_posts/AzureExtendedZonevWAN/index.md"
-          data-oid-likes="likes_posts/AzureExtendedZonevWAN/index.md"></script>
+          data-oid="views_posts/VirtualWANExpressRouteRouteMaps/index.md"
+          data-oid-likes="likes_posts/VirtualWANExpressRouteRouteMaps/index.md"></script>
       
     </section>
 
@@ -1047,7 +942,7 @@ Below configuration enables ExpressRoute Gateway to receive routes from Virtual 
       <div class="flex justify-between pt-3">
         <span>
           
-            <a class="flex group mr-3" href="/posts/virtualwanexpressrouteroutemaps/">
+            <a class="flex group mr-3" href="/posts/vwanhubspokemigration/">
               <span
                 class="mr-3 text-neutral-700 group-hover:text-primary-600 ltr:inline rtl:hidden dark:text-neutral dark:group-hover:text-primary-400"
                 >&larr;</span
@@ -1058,11 +953,11 @@ Below configuration enables ExpressRoute Gateway to receive routes from Virtual 
               >
               <span class="flex flex-col">
                 <span class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
-                  >Virtual WAN ExpressRoute together with RouteMaps</span
+                  >Migrate from Hub-Spoke to Azure Virtual WAN ExpressRoute Coexistence Guide</span
                 >
                 <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
                   
-                    <time datetime="2025-07-29T00:00:00&#43;00:00">2025-07-29</time>
+                    <time datetime="2025-07-25T00:00:00&#43;00:00">2025-07-25</time>
                   
                 </span>
               </span>
@@ -1071,14 +966,14 @@ Below configuration enables ExpressRoute Gateway to receive routes from Virtual 
         </span>
         <span>
           
-            <a class="flex text-right group ml-3" href="/posts/securingmicrosoftfoundrywithbyovnet/">
+            <a class="flex text-right group ml-3" href="/posts/azureextendedzonevwan/">
               <span class="flex flex-col">
                 <span class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
-                  >Securing Microsoft Foundry with Bring Your Own VNET</span
+                  >Azure Extended Zone Connectivity to Virtual WAN</span
                 >
                 <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
                   
-                    <time datetime="2025-12-07T00:00:00&#43;00:00">2025-12-07</time>
+                    <time datetime="2025-08-31T00:00:00&#43;00:00">2025-08-31</time>
                   
                 </span>
               </span>
@@ -1098,29 +993,6 @@ Below configuration enables ExpressRoute Gateway to receive routes from Virtual 
   
 
 
-      
-        
-          <div class="pt-3">
-            <hr class="border-dotted border-neutral-300 dark:border-neutral-600">
-            <div class="pt-3">
-              <script src="https://giscus.app/client.js"
-                data-repo="nthewara/nthewara-blog"
-                data-repo-id="R_kgDOPKsh5g"
-                data-category="General"
-                data-category-id="DIC_kwDOPKsh5s4Cs34e"
-                data-mapping="pathname"
-                data-strict="0"
-                data-reactions-enabled="1"
-                data-emit-metadata="0"
-                data-input-position="bottom"
-                data-theme="dark"
-                data-lang="en"
-                crossorigin="anonymous"
-                async>
-        </script>
-            </div>
-          </div>
-        
       
     </footer>
   </article>
