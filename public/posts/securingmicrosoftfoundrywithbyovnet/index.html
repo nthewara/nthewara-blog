@@ -132,7 +132,7 @@
     
     
     "mainEntityOfPage": "true",
-    "wordCount": "1032"
+    "wordCount": "1148"
   }]
   </script>
 
@@ -464,18 +464,10 @@
   <div class="flex flex-row flex-wrap items-center">
     
     
-      <time datetime="2025-12-07T00:00:00&#43;00:00">2025-12-07</time><span class="px-2 text-primary-500">&middot;</span><span>1032 words</span><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">5 mins</span>
+      <time datetime="2025-12-07T00:00:00&#43;00:00">2025-12-07</time><span class="px-2 text-primary-500">&middot;</span><span>1148 words</span><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">6 mins</span>
     
 
     
-    
-      <span class="pl-2"><span class="flex cursor-pointer">
-  <span
-    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
-    Draft
-  </span>
-</span>
-</span>
     
   </div>
 
@@ -544,7 +536,7 @@
 <p>Microsoft Foundry (Previously called AI Foundry) provides powerful capabilities for building and deploying AI agents and solutions. For enterprise customers, securing these deployments within their own network infrastructure is critical for compliance, governance, and integration with existing landing zones. The Bring Your Own (BYO) VNET deployment pattern enables organizations to secure and control both inbound and outbound access to Foundry Agent services while maintaining network isolation.
 In this blog post, I&rsquo;m sharing lessons learned from a recent Microsoft Foundry Agent Service deployment utilizing the BYO VNET pattern. This approach is particularly valuable for organizations that need to:</p>
 <ul>
-<li>Integrate AI Foundry with existing hub-and-spoke network architectures</li>
+<li>Integrate Microsoft Foundry with existing hub-and-spoke network architectures</li>
 <li>Enforce strict network security policies</li>
 <li>Maintain compliance with regulatory requirements</li>
 <li>Control data flow and access patterns</li>
@@ -559,8 +551,10 @@ In this blog post, I&rsquo;m sharing lessons learned from a recent Microsoft Fou
     </span>        
     
 </h3>
-<p>It&rsquo;s important to note that there are multiple versions of Azure AI Foundry in the documentation. This blog focuses on <strong>Azure AI Foundry Classic</strong> Service. For a detailed explanation of the differences between Hub based and Projectbased Foundry experiences, refer to <a
-  href="link">this blog</a>.</p>
+<p>It&rsquo;s important to note that there are multiple versions of AI Foundry in documentation. This blog focuses on <strong>Microsoft Foundry Classic</strong> Service. For a detailed explanation of the differences between Hub based and Projectbased Foundry experiences, refer to <a
+  href="https://techcommunity.microsoft.com/blog/azure-ai-foundry-blog/build-recap-new-azure-ai-foundry-resource-developer-apis-and-tools/4427241"
+    target="_blank"
+  >this blog</a>.</p>
 
 <h2 class="relative group">Security Architecture Overview 
     <div id="security-architecture-overview" class="anchor"></div>
@@ -571,10 +565,10 @@ In this blog post, I&rsquo;m sharing lessons learned from a recent Microsoft Fou
     </span>        
     
 </h2>
-<p>When deploying AI Foundry using the BYO VNET approach, there are three critical security layers to configure:</p>
+<p>When deploying Microsoft Foundry using the BYO VNET approach, there are three critical security layers to configure:</p>
 <ol>
 <li><strong>Individual Resource Configuration</strong> - Network access settings for each Azure resource</li>
-<li><strong>Network Security Groups (NSGs)</strong> - Subnet level traffic filtering for the delegated AI Foundry subnet</li>
+<li><strong>Network Security Groups (NSGs)</strong> - Subnet level traffic filtering for the delegated Microsoft Foundry subnet</li>
 <li><strong>Azure Firewall Configuration</strong> - Centralised outbound access control</li>
 </ol>
 
@@ -587,7 +581,7 @@ In this blog post, I&rsquo;m sharing lessons learned from a recent Microsoft Fou
     </span>        
     
 </h2>
-<p>Before deploying AI Foundry with BYO VNET, ensure you have:</p>
+<p>Before deploying Microsoft Foundry with BYO VNET, ensure you have:</p>
 <ul>
 <li>An existing VNET with available address space for dedicated subnets</li>
 <li>Azure Firewall or equivalent network virtual appliance</li>
@@ -643,7 +637,7 @@ In this blog post, I&rsquo;m sharing lessons learned from a recent Microsoft Fou
 </ul>
 <p><strong>2. Private Endpoints Subnet</strong></p>
 <ul>
-<li>Dedicated subnet for hosting private endpoints to AI Foundry resources</li>
+<li>Dedicated subnet for hosting private endpoints to Microsoft Foundry resources</li>
 <li>No delegation required</li>
 <li>Recommended size: /27 or larger</li>
 </ul>
@@ -657,7 +651,7 @@ In this blog post, I&rsquo;m sharing lessons learned from a recent Microsoft Fou
     </span>        
     
 </h3>
-<p>AI Foundry Agent Service must be able to resolve private endpoints. This can be achieved by either:</p>
+<p>Microsoft Foundry Agent Service must be able to resolve private endpoints. This can be achieved by either:</p>
 <ul>
 <li>Directly linking Private DNS zones to your VNETs, or</li>
 <li>Using custom DNS configuration on the VNET pointing to Azure Private DNS Resolver or other DNS resolver service</li>
@@ -682,7 +676,7 @@ In this blog post, I&rsquo;m sharing lessons learned from a recent Microsoft Fou
     </span>        
     
 </h3>
-<p>NSG configuration is critical for controlling outbound access from the AI Foundry delegated agent subnet. The following outbound rules represent the minimum required configuration:</p>
+<p>NSG configuration is critical for controlling outbound access from the Microsoft Foundry delegated agent subnet. The following outbound rules represent the minimum required configuration:</p>
 
 <h3 class="relative group">NSG Rules 
     <div id="nsg-rules" class="anchor"></div>
@@ -693,7 +687,7 @@ In this blog post, I&rsquo;m sharing lessons learned from a recent Microsoft Fou
     </span>        
     
 </h3>
-<p><strong>1. Azure Active Directory (Required)</strong></p>
+<p><strong>1. Entra ID Access (Azure Active Directory)</strong></p>
 <ul>
 <li>Service Tag: <code>AzureActiveDirectory</code></li>
 <li>Required for identity access</li>
@@ -752,7 +746,10 @@ In this blog post, I&rsquo;m sharing lessons learned from a recent Microsoft Fou
     </span>        
     
 </h3>
-<p>Azure Firewall provides centralized control over outbound traffic from the AI Foundry environment. The firewall processes rules in the following order:</p>
+<p>Azure Firewall provides centralised control over outbound traffic from the Microsoft Foundry environment. <a
+  href="https://learn.microsoft.com/en-us/azure/firewall/rule-processing"
+    target="_blank"
+  >Azure firewall processes rules</a> in the following order:</p>
 <ol>
 <li><strong>Network Rules</strong> - Processed first</li>
 <li><strong>Application Rules</strong> - Processed if no network rule match</li>
@@ -833,7 +830,7 @@ In this blog post, I&rsquo;m sharing lessons learned from a recent Microsoft Fou
     </span>        
     
 </h3>
-<p>Application rules provide FQDN-based filtering for outbound HTTPS traffic to specific domains required by AI Foundry services.</p>
+<p>Application rules provide FQDN-based filtering for outbound HTTPS traffic to specific domains required by Microsoft Foundry services.</p>
 <p>
 
 
@@ -869,8 +866,8 @@ In this blog post, I&rsquo;m sharing lessons learned from a recent Microsoft Fou
     </span>        
     
 </h3>
-<p>All AI Foundry project resources should be configured with network security in mind and with disabled public access.</p>
-<p>AI Foundry resource network configuration below
+<p>All Microsoft Foundry related resources should be configured with network security in mind and with disabled public access.</p>
+<p>Microsoft Foundry resource network configuration below
 
 
 
@@ -1010,7 +1007,7 @@ Azure Storage Network configuration - Disabled Public Access
     </span>        
     
 </h3>
-<p>After deployment, validate that the AI Foundry Agent service functions correctly:</p>
+<p>After deployment, validate Microsoft Foundry Agent service functions correctly:</p>
 <p>
 
 
@@ -1046,7 +1043,7 @@ Azure Storage Network configuration - Disabled Public Access
     </span>        
     
 </h3>
-<p>Use the AI Foundry Portal to create and configure a new agent. Successful agent creation indicates proper network connectivity and resource access.</p>
+<p>Use Microsoft Foundry Portal to create and configure a new agent. Successful agent creation indicates proper network connectivity and resource access.</p>
 <p>![[Pasted image 20251206165637.png | 500]]</p>
 
 <h3 class="relative group">2. Upload Knowledge Files 
@@ -1101,7 +1098,7 @@ Azure Storage Network configuration - Disabled Public Access
 </h3>
 <p>Validate agent responses using the chat playground. This tests:</p>
 <ul>
-<li>End-to-end agent functionality</li>
+<li>End to end agent functionality</li>
 <li>Knowledge retrieval from vector store</li>
 <li>OpenAI service connectivity
 
@@ -1156,7 +1153,7 @@ Thread logs functionality to trace requests
 </figure>
 </li>
 </ul>
-<p>This is another example where we are asking a relevant question with the knowledge provided (Microsoft annual report 2025). We get expected response with reference to uploaded content.</p>
+<p>This is another example where we are asking a relevant questions with knowledge provided (Microsoft annual report 2025). We get expected response with reference to uploaded content.</p>
 <p>
 
 
@@ -1233,7 +1230,7 @@ Thread logs functionality to trace requests
     </span>        
     
 </h3>
-<p>Comprehensive observability is essential for operating AI Foundry in production. Enable diagnostic logging across all components to gain visibility into traffic flows and request patterns.</p>
+<p>Comprehensive observability is essential for operating Microsoft Foundry in production. Enable diagnostic logging across all components to gain visibility into traffic flows and request patterns.</p>
 
 <h4 class="relative group">Observability - &gt; Firewall 
     <div id="observability----firewall" class="anchor"></div>
@@ -1244,7 +1241,7 @@ Thread logs functionality to trace requests
     </span>        
     
 </h4>
-<p>Having logs enabled on the firewall allows us to observe traffic flows from AI Foundry delegated subnet. Below is the behaviour. We can see communication from Foundry subnet, towards Microsoft Container Registry and towards Azure Container Apps endpoints.</p>
+<p>Having logs enabled on the firewall allows us to observe traffic flows from Microsoft Foundry delegated subnet. Looking at logs below, we can see communication from Foundry subnet, towards Microsoft Container Registry and towards Azure Container Apps endpoints.</p>
 <p>Application Rule Logs below
 
 
@@ -1307,8 +1304,8 @@ Thread logs functionality to trace requests
     </span>        
     
 </h4>
-<p>Below are logs from the VNET hosting agents. We can observe ACA Traffic reaching Microsoft managed endpoinst
-
+<p>Below are logs from the VNET hosting agents. We can observe ACA Traffic reaching Microsoft managed endpoinst</p>
+<p>
 
 
 
@@ -1334,12 +1331,12 @@ Thread logs functionality to trace requests
 </figure>
 </p>
 
-<h4 class="relative group">Observability -&gt; AI Foundry Logs 
-    <div id="observability---ai-foundry-logs" class="anchor"></div>
+<h4 class="relative group">Observability -&gt; Microsoft Foundry Logs 
+    <div id="observability---microsoft-foundry-logs" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100 select-none">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#observability---ai-foundry-logs" aria-label="Anchor">#</a>
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#observability---microsoft-foundry-logs" aria-label="Anchor">#</a>
     </span>        
     
 </h4>
@@ -1416,6 +1413,19 @@ Thread logs functionality to trace requests
     
 </h2>
 <p>Deploying Microsoft Foundry using the Bring Your Own VNET pattern provides enterprise grade security and network control for AI agent workloads. This blog post has demonstrated a comprehensive approach to securing Microsoft Foundry deployments through three critical layers: individual resource network configuration, subnet  NSG rules, and centralised Azure Firewall policies.</p>
+
+<h3 class="relative group">Key Takeaways 
+    <div id="key-takeaways" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100 select-none">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#key-takeaways" aria-label="Anchor">#</a>
+    </span>        
+    
+</h3>
+<p><strong>Security in Depth</strong>: BYO VNET pattern enables defense in depth by combining multiple security controls from resource level private endpoints to network level traffic filtering. This layered approach ensures that Microsoft Foundry deployments meet enterprise security requirements while maintaining full functionality.</p>
+<p><strong>Private Endpoints Are Critical</strong>: All Microsoft Foundry resources should be configured with disabled public network access and accessed exclusively through private endpoints. This ensures traffic remains within your virtual network and integrates seamlessly with existing Azure landing zone.</p>
+<p><strong>Observability is Essential</strong>: Comprehensive logging across Azure Firewall, VNET Flow Logs, and resource specific diagnostics provides the visibility needed to troubleshoot issues, optimize performance, and maintain security compliance. The investment in proper logging pays dividends during operations.</p>
 
           
           
