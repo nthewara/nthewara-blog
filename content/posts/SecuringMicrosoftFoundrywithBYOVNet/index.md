@@ -18,7 +18,7 @@ In this blog post, I'm sharing lessons learned from a recent Microsoft Foundry A
 ### Understanding AI Foundry Versions
 
 {{< alert icon="lightbulb" cardColor="#0077be" iconColor="#ffffff" textColor="#ffffff" >}}
-It's important to note that there are multiple versions of AI Foundry in documentation. This blog focuses on **Microsoft Foundry Classic** Service. For a detailed explanation of the differences between Hub based and Projectbased Foundry experiences, refer to [this blog](https://techcommunity.microsoft.com/blog/azure-ai-foundry-blog/build-recap-new-azure-ai-foundry-resource-developer-apis-and-tools/4427241).
+It's important to note that there are multiple versions of AI Foundry in documentation. This blog focuses on **Microsoft Foundry Classic** Service. For a detailed explanation of the differences between Hub based and Project based Foundry experiences, refer to [this blog](https://techcommunity.microsoft.com/blog/azure-ai-foundry-blog/build-recap-new-azure-ai-foundry-resource-developer-apis-and-tools/4427241).
 {{< /alert >}}
 
 ## Network Security Architecture Overview
@@ -81,11 +81,10 @@ NSG configuration is critical for controlling outbound access from the Microsoft
 - Required for pulling container images
 - Port: 443
 
-**4. Container Apps Internal Communication**
-- Destination: - 100.100.0.0/17, 100.100.128.0/19,100.100.160.0/19,100.100.192.0/19
-- Container Apps uses this range for internal platform communication
+**4. Foundry Infra Communication**
+- Destination: - 100.67.0.0/24
+- [Foundry Infra Communication](https://learn.microsoft.com/en-us/azure/ai-foundry/agents/how-to/virtual-networks?view=foundry#known-limitations)
 - Ports: Any
-![20251206134928](20251206134928.png)
 
 ### Azure Firewall Configuration
 Azure Firewall provides centralised control over outbound traffic from the Microsoft Foundry environment. [Azure firewall processes rules](https://learn.microsoft.com/en-us/azure/firewall/rule-processing) in the following order:  
@@ -97,14 +96,9 @@ Azure Firewall provides centralised control over outbound traffic from the Micro
 Configure network rules to allow traffic to Azure service tags:
 - `AzureActiveDirectory` - Port 443
 - `InternalACATraffic`
+  
+Allow "100.67.0.0/24" range which is used by Agent Infra communication
 
-{{< alert icon="lightbulb" cardColor="#0077be" iconColor="#ffffff" textColor="#ffffff" >}}
-**Key Configuration Note:** Create an IP Group containing [Container Apps internal IP ranges](https://learn.microsoft.com/en-us/azure/container-apps/custom-virtual-networks?tabs=workload-profiles-env#subnet-address-range-restrictions) (100.64.0.0/10, 100.100.0.0/17, 100.100.128.0/19, 100.100.160.0/19, 100.100.192.0/19) to use as source addresses in firewall rules.
-{{< /alert >}}
-
-![20251206143806](20251206143806.png)
-
-![20251206143750](20251206143750.png)
 ### Application Rules Configuration
 Application rules provide FQDN-based filtering for outbound HTTPS traffic to specific domains required by Microsoft Foundry services.
 
