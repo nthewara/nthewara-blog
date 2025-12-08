@@ -95,9 +95,10 @@ Azure Firewall provides centralised control over outbound traffic from the Micro
 ### Network Rules Configuration
 Configure network rules to allow traffic to Azure service tags:
 - `AzureActiveDirectory` - Port 443
-- `InternalACATraffic`
-  
+
 Allow "100.67.0.0/24" range which is used by Agent Infra communication
+
+![SCR-20251208-oftb](SCR-20251208-oftb.png)
 
 ### Application Rules Configuration
 Application rules provide FQDN-based filtering for outbound HTTPS traffic to specific domains required by Microsoft Foundry services.
