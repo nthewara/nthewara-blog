@@ -72,4 +72,7 @@ jobs:
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
+        env:
+          # deploy-pages v5 bundles a dependency that triggers this known Node 24 warning.
+          NODE_OPTIONS: --disable-warning=DEP0040
         uses: actions/deploy-pages@v5
