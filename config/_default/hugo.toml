@@ -2,7 +2,6 @@
 # Refer to the theme docs for more details about each of these parameters.
 # https://blowfish.page/docs/getting-started/
 
-theme = "blowfish" # UNCOMMENT THIS LINE
 baseURL = "https://nirmalt.com"
 defaultContentLanguage = "en"
 
@@ -67,3 +66,10 @@ enableEmoji = true
       name = 'fragmentrefs'
       type = 'fragments'
       weight = 10
+
+# Blowfish v2.104.0's root config contains only stale Hugo compatibility metadata.
+# Ignore it while keeping the local git submodule at the exact v2.104.0 tag.
+[module]
+  [[module.imports]]
+    path = "blowfish"
+    ignoreConfig = true

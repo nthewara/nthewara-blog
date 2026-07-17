@@ -1,19 +1,46 @@
 {{- if (eq (.Site.Params.disableComments | default false) false) -}}
     {{- if (eq (.Params.disableComments | default false) false) -}}
-        <script src="https://giscus.app/client.js"
-                data-repo="nthewara/nthewara-blog"
-                data-repo-id="R_kgDOPKsh5g"
-                data-category="General"
-                data-category-id="DIC_kwDOPKsh5s4Cs34e"
-                data-mapping="pathname"
-                data-strict="0"
-                data-reactions-enabled="1"
-                data-emit-metadata="0"
-                data-input-position="bottom"
-                data-theme="dark"
-                data-lang="en"
-                crossorigin="anonymous"
-                async>
+        <div id="giscus-comments"></div>
+        <script>
+            (() => {
+                const container = document.getElementById("giscus-comments");
+                const getTheme = () =>
+                    document.documentElement.classList.contains("dark") ? "dark" : "light";
+                const setTheme = () => {
+                    const iframe = container.querySelector("iframe.giscus-frame");
+                    iframe?.contentWindow.postMessage(
+                        { giscus: { setConfig: { theme: getTheme() } } },
+                        "https://giscus.app"
+                    );
+                };
+
+                const script = document.createElement("script");
+                script.src = "https://giscus.app/client.js";
+                script.dataset.repo = "nthewara/nthewara-blog";
+                script.dataset.repoId = "R_kgDOPKsh5g";
+                script.dataset.category = "General";
+                script.dataset.categoryId = "DIC_kwDOPKsh5s4Cs34e";
+                script.dataset.mapping = "pathname";
+                script.dataset.strict = "0";
+                script.dataset.reactionsEnabled = "1";
+                script.dataset.emitMetadata = "0";
+                script.dataset.inputPosition = "bottom";
+                script.dataset.theme = getTheme();
+                script.dataset.lang = "en";
+                script.crossOrigin = "anonymous";
+                script.async = true;
+                container.appendChild(script);
+
+                new MutationObserver(setTheme).observe(document.documentElement, {
+                    attributes: true,
+                    attributeFilter: ["class"],
+                });
+                window.addEventListener("message", (event) => {
+                    if (event.origin === "https://giscus.app") {
+                        setTheme();
+                    }
+                });
+            })();
         </script>
     {{- end -}}
 {{- end -}}
